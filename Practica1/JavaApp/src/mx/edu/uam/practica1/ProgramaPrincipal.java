@@ -10,7 +10,7 @@ public class ProgramaPrincipal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Hola Mundo En UAM-I");
+        System.out.println("Hola Mundo En UAM-I, java OCA");
     }
     
 }
