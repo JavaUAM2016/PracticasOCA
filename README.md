@@ -30,6 +30,7 @@ https://github.com/sidlors/CursoJavaOCA/wiki
 | Jhonatan Urrieta Guerrero    | monirammsteinsone@gmail.com  | @monilezama  |
 | Ricardo Santander Hilario   | rsantander@gmail.com  | @rithcodigo |
 |José Alfonso Lomas Martínez|ajobarz@gmail.com|@AlfonsoLomas|
+|Marisol Reyes Medina|losiramrm@hotmail.com|@losiram2005|
 
 
 ![](https://s-media-cache-ak0.pinimg.com/736x/17/cd/41/17cd4124e87c4b30a5fecf2605d86b6b.jpg)
