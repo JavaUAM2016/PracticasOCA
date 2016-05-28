@@ -1,43 +1,40 @@
 package mx.edu.uam.practica2;
 import mx.edu.uam.practica2.dispositivos.Celular;
+
 /**
  *
- * @author sidlors
+ * @author invited
  */
 public class Aplicativo {
-    
-    
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-       Celular celularHuawei= new Celular();
-       Celular celularIphone6s=new Celular("6s","iPhone", 19000.00, "Blanco", 5345345354L, false);
-        //System.out.println("precio " + celularHuawei.precio);
-        System.out.println("modelo " + celularIphone6s.modelo);
+        Celular celularHuawei = new Celular();
+        Celular celularIPhone6s = new Celular("6S", "IPhone", 19000.00, "Blanco", 5551808719L, true);
+        //System.out.println("Objeto creado "+ celularHuawei);
+        System.out.println("Objeto creado "+ celularIPhone6s.modelo);
         
-        celularIphone6s.marcaNumero(43324234L);
-        celularIphone6s.colgar();
-        celularIphone6s.recibirLlamada();
-         celularIphone6s.marcaNumero(43324234L);
-         celularIphone6s.colgar();
-         celularIphone6s.marcaNumero(43324234L);
-         //Lo nuevo es que no permita hacer conexion a internet
-         //cuando la linea este ocupada y mostralo en modo debbuger
-        celularIphone6s.conetarseInternet("http://facebook.com");
+        System.out.println("IPHONE");
+        celularIPhone6s.marcaNumero(5551808719L);
+        celularIPhone6s.colgar();
+        celularIPhone6s.recibirLlamada();
+        celularIPhone6s.marcaNumero(5551808719L);
+        celularIPhone6s.colgar();
+        celularIPhone6s.marcaNumero(5551808719L);
+        celularIPhone6s.conectarseInternet("http://facebook.com");
         
-        ///Ahora con el Huawei
-        celularHuawei.marcaNumero(43324234L);
+        // Huawei
+        System.out.println("HUAWEI");
+        celularHuawei.marcaNumero(5551808719L);
         celularHuawei.colgar();
         celularHuawei.recibirLlamada();
-        celularHuawei.marcaNumero(43324234L);
-        celularHuawei.marcaNumero(43324234L);
-        celularHuawei.conetarseInternet("http://twitter.com");    
-        System.out.println(celularHuawei.modelo);
-                
-                
+        celularHuawei.marcaNumero(5551808719L);
+        celularHuawei.marcaNumero(5551808719L);
+        celularHuawei.conectarseInternet("http://twitter.com");
+
         
     }
     
