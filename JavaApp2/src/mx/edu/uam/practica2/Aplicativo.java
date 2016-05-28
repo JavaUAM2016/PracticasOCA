@@ -9,8 +9,6 @@ public class Aplicativo {
         Celular Xperia   = new Celular();
         Celular Iphone   = new Celular("5s", "Iphone", 19000.0, "blanco", 5532019155L, true);
         
-        //System.out.println("Xperia: " + Xperia);
-        
         pruebaTelefono(Iphone);
         pruebaTelefono(Xperia);
         
