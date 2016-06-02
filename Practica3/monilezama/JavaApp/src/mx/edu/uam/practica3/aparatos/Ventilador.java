@@ -9,7 +9,12 @@ public class Ventilador {
     private int bajarVel;
     private int velActual;
     private boolean girando=false;
+    private int volMax=3;
 
+    public int getVolMax() {
+        return volMax;
+    }
+    
     public int getBajarVel() {
         return bajarVel;
     }
@@ -37,11 +42,7 @@ public class Ventilador {
     public void setEncendido(boolean encendido) {
         this.encendido = encendido;
     }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
+    
     public void setSubirVel(int subirVel) {
         this.subirVel = subirVel;
     }

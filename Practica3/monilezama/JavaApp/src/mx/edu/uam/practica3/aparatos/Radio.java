@@ -8,9 +8,12 @@ public class Radio {
 private double estacionActual;
 private boolean encendido=false;
 private int volActual;
+private int volMax=40;
 
+    public int getVolMax() {
+        return volMax;
+    }
     
-
     public String getMarca() {
         return marca;
     }
@@ -24,11 +27,6 @@ private int volActual;
     public void setEncendido(boolean encendido) {
         this.encendido = encendido;
     }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
 
     public int getVolActual() {
         return volActual;

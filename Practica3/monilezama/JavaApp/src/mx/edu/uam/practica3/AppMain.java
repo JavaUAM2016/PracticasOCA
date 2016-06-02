@@ -5,15 +5,16 @@ import mx.edu.uam.practica3.aparatos.*;
 
 public class AppMain {
 
-  
-    
-  public static void main(String[] args) {
+    public static void main(String[] args) {
         Television tv=new Television();
         Ventilador venti= new Ventilador();
         Radio ra= new Radio();
+        Dvd dvd= new Dvd();
+        
         ControlTv controlTv= new ControlTv();
         ControlVentilador conVn= new ControlVentilador();
         ControlRadio controlRa= new ControlRadio();
+        ControlDvd controlDvd= new ControlDvd();
         
        System.out.println("Usando la Tv");
         controlTv.prender(tv);
@@ -41,6 +42,19 @@ public class AppMain {
         controlRa.bajarEstacion(ra);
         controlRa.prende(ra);
         controlRa.subirEstacion(ra);
+        
+        System.out.println(" ");
+        System.out.println("Usando el dvd");
+        controlDvd.prende(dvd);
+        controlDvd.insertarDisco(dvd, "nemo");
+        controlDvd.reproducir(dvd);
+        controlDvd.adelantarReproduccion(dvd);
+        controlDvd.reproducir(dvd);
+        controlDvd.expulsarBandeja(dvd);
+        controlDvd.atrasarReproduccion(dvd);
+        controlDvd.insertarDisco(dvd, "Concierto Adele");
+        controlDvd.reproducir(dvd);
+        
     }
     
 }

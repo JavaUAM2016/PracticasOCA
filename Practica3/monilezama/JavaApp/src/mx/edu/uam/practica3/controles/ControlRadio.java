@@ -3,7 +3,7 @@ package mx.edu.uam.practica3.controles;
 import mx.edu.uam.practica3.aparatos.Radio;
 
 public class ControlRadio {
-      private int volMax=50;
+      
     
       public void prende(Radio radio){
         if(!radio.isEncendido()){
@@ -17,7 +17,7 @@ public class ControlRadio {
     }
     
     public void subirVol(Radio radio){
-        if(radio.isEncendido() && radio.getVolActual()< volMax){
+        if(radio.isEncendido() && radio.getVolActual()<radio.getVolMax()){
             radio.setVolActual(radio.getVolActual()+1);
             System.out.println("Se subio el volumen del radio...");
         }

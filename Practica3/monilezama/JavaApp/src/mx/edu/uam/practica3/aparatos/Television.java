@@ -8,7 +8,11 @@ public class Television {
     private boolean encendido=false; //apagada
     private int canalActual;
     private int volActual;
-    
+    private int volMax=30;
+
+    public int getVolMax() {
+        return volMax;
+    }
     
     public int getCanalActual() {
         return canalActual;
@@ -36,10 +40,6 @@ public class Television {
 
     public void setEncendido(boolean encendido) {
         this.encendido = encendido;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
     }
 
     public void setTamanio(int tamanio) {

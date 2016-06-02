@@ -4,11 +4,6 @@ import mx.edu.uam.practica3.aparatos.Television;
 
 public class ControlTv {
    
-    private int volMax=40;
-   
-   
-    
-    
     public void prender(Television tele){
         if(!tele.isEncendido()){
             tele.setEncendido(true);
@@ -23,7 +18,7 @@ public class ControlTv {
     
     public void subeVol(Television tele){
        if(tele.isEncendido()){
-           if(tele.getVolActual()<volMax){
+           if(tele.getVolActual()<tele.getVolMax()){
                tele.setVolActual(tele.getCanalActual()+1);
                System.out.println("Se subio el volumen..") ;
            }

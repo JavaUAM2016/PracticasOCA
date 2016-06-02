@@ -5,7 +5,7 @@ package mx.edu.uam.practica3.controles;
 import mx.edu.uam.practica3.aparatos.Ventilador;
 
 public class ControlVentilador {
-    private int velMax=3;
+    
     
     public void prende(Ventilador ven){
         if(ven.isEncendido()==false){
@@ -20,7 +20,7 @@ public class ControlVentilador {
     
     public void subeVel(Ventilador ven){
        if(ven.isEncendido()){
-           if(ven.getVelActual()<velMax){
+           if(ven.getVelActual()<ven.getVolMax()){
                ven.setVelActual(ven.getVelActual()+1);
                System.out.println("Se subio la velocidad..") ;
            }
