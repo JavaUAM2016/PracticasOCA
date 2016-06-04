@@ -70,6 +70,7 @@ public class practica3_AppMain {
         R.subirEstacion(R1);
         R.cambiarEstacion(R1, 56.8);
         R.bajarEstacion(R1);
+        R.encenderRaddio(R1);
        
         
         

@@ -50,10 +50,10 @@ public class ControlTelevision {
     
     public void subeVol(Television T){
         if(T.getVolumenAtual()==T.getVolMax()){
-            System.out.println("Volumen maximo");
+            System.out.println("Volumen maximo alacanzado");
         }else{
             T.setVolumenAtual(T.getVolumenAtual()+1);
-            System.out.println("El volumen actual es: "+T.getVolumenAtual());
+            System.out.println(" Sube volumen...El volumen actual es: "+T.getVolumenAtual());
         }
     }
     
@@ -62,7 +62,7 @@ public class ControlTelevision {
             System.out.println("Volumen minimo");
         }else{
             T.setVolumenAtual(T.getVolumenAtual()-1);
-            System.out.println("El volumen actual es: "+T.getVolumenAtual());
+            System.out.println("Baja volumen....El volumen actual es: "+T.getVolumenAtual());
         }
     }
     
