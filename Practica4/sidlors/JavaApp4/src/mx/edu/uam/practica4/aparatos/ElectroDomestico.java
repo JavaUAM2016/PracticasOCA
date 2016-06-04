@@ -12,6 +12,7 @@ public abstract class ElectroDomestico {
     private boolean estaEncendido;
     private String marca;
 
+
    
     
     
