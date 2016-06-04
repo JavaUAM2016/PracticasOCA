@@ -23,7 +23,7 @@ public class ControlTelevision {
             
             
             
-            ;
+            
             System.out.println("La tv ya estaba encendia");
             
             System.out.println("");

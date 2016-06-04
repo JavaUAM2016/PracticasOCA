@@ -5,8 +5,10 @@
  */
 package mx.edu.uam;
 
+import mx.edu.uam.practica3.aparatos.Radio;
 import mx.edu.uam.practica3.control.ControlTelevision;
 import mx.edu.uam.practica3.aparatos.Television;
+import mx.edu.uam.practica3.control.ControlRadio;
 /**
  *
  * @author invited
@@ -22,8 +24,13 @@ public class practica3_AppMain {
           T1.setEncendido(true);
           T1.setVolumenAtual(25);
           T1.setCanalActual(68);
+          Radio R1 = new Radio();
           
-        
+         R1.setVolActual(15);
+         R1.setEstacionActual(45.5);
+          
+          
+        ControlRadio R = new ControlRadio();
         ControlTelevision TV = new ControlTelevision();
         
         TV.enciendeTV(T1);
@@ -53,7 +60,16 @@ public class practica3_AppMain {
         System.out.println("");
         
         TV.cambiarCanal(T1, 23);
-         
+         System.out.println("Radio");
+        R.encenderRaddio(R1);
+        R.bajarVolumen(R1);
+        R.bajarVolumen(R1);
+        R.subirVolumen(R1);
+        R.bajarEstacion(R1);
+        R.bajarEstacion(R1);
+        R.subirEstacion(R1);
+        R.cambiarEstacion(R1, 56.8);
+        R.bajarEstacion(R1);
        
         
         
