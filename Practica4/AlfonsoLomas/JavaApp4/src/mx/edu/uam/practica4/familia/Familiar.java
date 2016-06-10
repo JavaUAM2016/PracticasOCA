@@ -6,7 +6,7 @@ import mx.edu.uam.practica4.control.ControlRemoto;
  *
  * @author invited
  */
-public class Familiar {
+public abstract class Familiar {
     
     private String nombre;
     private int edad;
