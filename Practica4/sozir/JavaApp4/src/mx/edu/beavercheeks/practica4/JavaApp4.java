@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mx.edu.beavercheeks.practica3;
+package mx.edu.beavercheeks.practica4;
 import mx.edu.beavercheeks.practica4.controls.*;
 import mx.edu.beavercheeks.practica4.devices.*;
 import mx.edu.beavercheeks.practica4.familia.*;
@@ -13,7 +13,7 @@ import mx.edu.beavercheeks.practica4.familia.*;
  *
  * @author sozir
  */
-public class AppMain {
+public class JavaApp4 {
 
     /**
      * @param args the command line arguments
