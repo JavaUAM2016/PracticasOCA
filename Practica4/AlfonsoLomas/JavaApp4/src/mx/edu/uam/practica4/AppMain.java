@@ -22,7 +22,8 @@ public class AppMain {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Electrodomestico television = new Television("Sorny", 15, false, 5, 950, 10, 100);
+        Television tv = new Television();
+        Electrodomestico television = new Television("Sorny", 15, true, 5, 950, 10, 100);
         ControlRemoto controlTv = new ControlTv();
         
         Electrodomestico ventilador = new Ventilador("AIRE", 90, false, 10, 50);
@@ -35,6 +36,11 @@ public class AppMain {
         papa.setControlRemoto(controles);
         controlTv = papa.getControlRemoto()[0];
         controlTv.apagar(television);
+        controlTv.encender(television);
+        System.out.println("canal actual: " + tv.getCanalActual());
+        System.out.println("cambios en canal");
+        ((ControlTv)controlTv).cambiaCanal((Television)television, 20);
+        System.out.println("canal actual: " + ((Television)television).getCanalActual());
         
         
 //        controlTv.powerTv(television);
@@ -60,7 +66,4 @@ public class AppMain {
 //        System.out.println("");
         
     }
-    
-    
-    
 }

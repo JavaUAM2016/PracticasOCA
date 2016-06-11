@@ -23,6 +23,10 @@ public class Television extends Electrodomestico {
         this.volumenMaximo = volumenMaximo;
     }
 
+    public Television() {
+        
+    }
+
     public int getTamanio() {
         return tamanio;
     }
