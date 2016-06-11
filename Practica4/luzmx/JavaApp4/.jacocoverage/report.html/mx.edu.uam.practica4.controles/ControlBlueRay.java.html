@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>ControlBlueRay.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;JavaApp4&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">mx.edu.uam.practica4.controles</a> &gt; <span class="el_source">ControlBlueRay.java</span></div><h1>ControlBlueRay.java</h1><pre class="source lang-java linenums">package mx.edu.uam.practica4.controles;
+
+import mx.edu.uam.practica4.electroDomesticos.BlueRay;
+import mx.edu.uam.practica4.electroDomesticos.ElectroDomestico;
+
+
+
+/**
+ *
+ * @author jhernandezn
+ */
+<span class="fc" id="L12">public class ControlBlueRay extends ControlRemoto {</span>
+    
+    /**
+     * Enciende BlueRay
+     * @param blueRay 
+     */
+     public void encender(BlueRay blueRay) {
+<span class="nc" id="L19">        super.encender(blueRay);</span>
+<span class="nc" id="L20">        System.out.println(&quot;BlueRay encendido&quot;);</span>
+<span class="nc" id="L21">    }</span>
+
+     /**
+      * Apaga BlueRay
+      * @param blueRay 
+      */
+    public void apagar(BlueRay blueRay) {
+<span class="nc" id="L28">        super.apagar(blueRay);</span>
+<span class="nc" id="L29">        System.out.println(&quot;BlueRay apagado&quot;);</span>
+<span class="nc" id="L30">    }</span>
+
+    /**
+     * Sube Volumen de BlueRay
+     * @param aparato
+     * @throws SistemaAparatosException 
+     */
+    public void subirVolumen(ElectroDomestico aparato)   {
+<span class="nc bnc" id="L38" title="All 2 branches missed.">        if (aparato instanceof BlueRay) {</span>
+<span class="nc" id="L39">            BlueRay blueRay = (BlueRay) aparato;</span>
+<span class="nc" id="L40">            subeVolumenBlueRay(blueRay);</span>
+<span class="nc" id="L41">        } else {</span>
+<span class="nc" id="L42">            System.out.println(&quot;Este aparato no soporta 'subirVolumen'&quot;);</span>
+        }
+
+<span class="nc" id="L45">    }</span>
+
+    /**
+     * metodo privado que sube volumen
+     * @param blueRay
+     * @throws SistemaAparatosException 
+     */
+    private void subeVolumenBlueRay(BlueRay blueRay)  {
+<span class="nc bnc" id="L53" title="All 2 branches missed.">        if (blueRay.getVolumenActual() &lt; blueRay.getVolumenMaximo()) {</span>
+
+        } else {
+<span class="nc" id="L56">            System.out.println(&quot;Este aparato ya tiene 'Volumen maximo'&quot;);</span>
+        }
+<span class="nc" id="L58">    }</span>
+    
+    /**
+     * Cambia al capitulo siguiente en el Blueray
+     * @param blueRay 
+     */
+     public void cambiarCapituloSiguiente(BlueRay blueRay){
+<span class="nc" id="L65">        blueRay.setCapituloActual(blueRay.getCapituloActual()+1);</span>
+<span class="nc" id="L66">    }</span>
+
+     /**
+      * Cambia al capitulo anterior en el Blueray
+      * @param blueRay 
+      */
+    public void cambiarCapituloAnterior(BlueRay blueRay){
+<span class="nc" id="L73">        blueRay.setCapituloActual(blueRay.getCapituloActual()+1);</span>
+<span class="nc" id="L74">    }</span>
+    
+    /**
+     * Cambia Capitulo en el Blueray dado el capitulo
+     * @param blueRay
+     * @param capitulo 
+     */
+    public void cambiarCapitulo(BlueRay blueRay, int capitulo){
+<span class="nc" id="L82">        blueRay.setCapituloActual(capitulo);</span>
+<span class="nc" id="L83">    }</span>
+        
+    
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

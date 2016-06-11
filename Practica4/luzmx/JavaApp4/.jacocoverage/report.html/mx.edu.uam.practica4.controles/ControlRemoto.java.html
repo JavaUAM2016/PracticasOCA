@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>ControlRemoto.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;JavaApp4&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">mx.edu.uam.practica4.controles</a> &gt; <span class="el_source">ControlRemoto.java</span></div><h1>ControlRemoto.java</h1><pre class="source lang-java linenums">package mx.edu.uam.practica4.controles;
+
+import mx.edu.uam.practica4.electroDomesticos.ElectroDomestico;
+
+
+/**
+ *
+ * @author jhernandezn
+ */
+<span class="fc" id="L10">public abstract  class ControlRemoto {</span>
+    
+    private int numBaterias;
+    private String tipoPila;
+
+
+    /**
+     * Enciende Aparatos
+     * @param aparato 
+     */
+    public void encender(ElectroDomestico aparato) {
+        
+<span class="nc" id="L22">    }</span>
+
+    /**
+     * Apaga Aparatos
+     * @param aparato 
+     */
+    public void apagar(ElectroDomestico aparato) {
+     
+<span class="fc" id="L30">    }</span>
+    
+
+    public int getNumBaterias() {
+<span class="nc" id="L34">        return numBaterias;</span>
+    }
+
+    public void setNumBaterias(int numBaterias) {
+<span class="nc" id="L38">        this.numBaterias = numBaterias;</span>
+<span class="nc" id="L39">    }</span>
+
+    public String getTipoPila() {
+<span class="nc" id="L42">        return tipoPila;</span>
+    }
+
+    public void setTipoPila(String tipoPila) {
+<span class="nc" id="L46">        this.tipoPila = tipoPila;</span>
+<span class="nc" id="L47">    }</span>
+
+    @Override
+    public String toString() {
+<span class="nc" id="L51">        return &quot;ControlRemoto &quot; + &quot;numBaterias=&quot; + numBaterias + &quot;, tipoPila=&quot; + tipoPila;</span>
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>
