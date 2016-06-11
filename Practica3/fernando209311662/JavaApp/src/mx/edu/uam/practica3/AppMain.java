@@ -40,9 +40,6 @@ public class AppMain {
         controlTv.cambiaCanal(LG, 23);
         System.out.println("Cambiar canal");
         controlTv.cambiaCanal(LG, 55);
-        
-        
-        
     }
 
     
