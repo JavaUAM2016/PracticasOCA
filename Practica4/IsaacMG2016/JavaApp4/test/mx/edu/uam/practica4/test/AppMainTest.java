@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package mx.edu.uam.practica4.test;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -15,9 +16,9 @@ import static org.junit.Assert.*;
  *
  * @author asus
  */
-public class NewEmptyJUnitTest {
+public class AppMainTest {
     
-    public NewEmptyJUnitTest() {
+    public AppMainTest() {
     }
     
     @BeforeClass
