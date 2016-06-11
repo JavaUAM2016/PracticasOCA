@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>ControlRemoto.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;JavaApp4&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">mx.edu.uam.practica4.controles</a> &gt; <span class="el_source">ControlRemoto.java</span></div><h1>ControlRemoto.java</h1><pre class="source lang-java linenums">
+package mx.edu.uam.practica4.controles;
+import mx.edu.uam.practica4.aparatos.Electrodomestico;
+
+
+<span class="fc" id="L6">public abstract class ControlRemoto {</span>
+    private int numBaterias;
+    private String tipoBaterias;
+<span class="fc" id="L9">    boolean encender=true;</span>
+  
+
+    
+<span class="nc" id="L13">    public void encender(Electrodomestico aparato){}</span>
+
+    public int getNumBaterias() {
+<span class="nc" id="L16">        return numBaterias;</span>
+    }
+
+    public String getTipoBaterias() {
+<span class="nc" id="L20">        return tipoBaterias;</span>
+    }
+
+    public boolean isEncender() {
+<span class="nc" id="L24">        return encender;</span>
+    }
+
+    public void setEncender(boolean encender) {
+<span class="nc" id="L28">        this.encender = encender;</span>
+<span class="nc" id="L29">    }</span>
+
+    public void setNumBaterias(int numBaterias) {
+<span class="nc" id="L32">        this.numBaterias = numBaterias;</span>
+<span class="nc" id="L33">    }</span>
+
+    public void setTipoBaterias(String tipoBaterias) {
+<span class="nc" id="L36">        this.tipoBaterias = tipoBaterias;</span>
+<span class="nc" id="L37">    }</span>
+    
+     public void prender(Electrodomestico t){
+<span class="pc bpc" id="L40" title="1 of 2 branches missed.">        if(!t.isEncendido()){</span>
+<span class="fc" id="L41">            t.setEncendido(true);</span>
+<span class="fc" id="L42">           System.out.println(&quot;Se prendio...&quot;);</span>
+        }else{
+<span class="nc" id="L44">            t.setEncendido(false);</span>
+<span class="nc" id="L45">            System.out.println(&quot;Se apago...&quot;);</span>
+        }
+            
+<span class="fc" id="L48">    }</span>
+
+    
+
+ 
+    
+    
+
+   
+  
+
+
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

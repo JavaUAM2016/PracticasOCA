@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Dvd.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;JavaApp4&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">mx.edu.uam.practica4.aparatos</a> &gt; <span class="el_source">Dvd.java</span></div><h1>Dvd.java</h1><pre class="source lang-java linenums">package mx.edu.uam.practica4.aparatos;
+
+/**
+ *
+ * @author monica
+ */
+<span class="fc" id="L7">public class Dvd extends Electrodomestico{</span>
+    private String marca;
+    private String video;
+<span class="fc" id="L10">    private boolean encendido=false;</span>
+<span class="fc" id="L11">    private boolean reproduciendo=false;</span>
+    private int capituloActual;
+<span class="fc" id="L13">    private boolean bandejaAbierta=false;</span>
+<span class="fc" id="L14">    private boolean discoInsertado=false; //tiene disco adentro?</span>
+
+    public String getMarca() {
+<span class="nc" id="L17">        return marca;</span>
+    }
+
+    public boolean isEncendido() {
+<span class="nc" id="L21">        return encendido;</span>
+    }
+
+    public boolean isReproduciendo() {
+<span class="nc" id="L25">        return reproduciendo;</span>
+    }
+
+    public void setEncendido(boolean encendido) {
+<span class="nc" id="L29">        this.encendido = encendido;</span>
+<span class="nc" id="L30">    }</span>
+
+    public void setReproduciendo(boolean reproduciendo) {
+<span class="nc" id="L33">        this.reproduciendo = reproduciendo;</span>
+<span class="nc" id="L34">    }</span>
+
+    public void setCapituloActual(int capituloActual) {
+<span class="nc" id="L37">        this.capituloActual = capituloActual;</span>
+<span class="nc" id="L38">    }</span>
+
+    public int getCapituloActual() {
+<span class="nc" id="L41">        return capituloActual;</span>
+    }
+
+    public boolean isBandejaAbierta() {
+<span class="nc" id="L45">        return bandejaAbierta;</span>
+    }
+
+    public void setBandejaAbierta(boolean bandejaAbierta) {
+<span class="nc" id="L49">        this.bandejaAbierta = bandejaAbierta;</span>
+<span class="nc" id="L50">    }</span>
+
+    public boolean isDiscoInsertado() {
+<span class="nc" id="L53">        return discoInsertado;</span>
+    }
+
+    public void setDiscoInsertado(boolean discoInsertado) {
+<span class="nc" id="L57">        this.discoInsertado = discoInsertado;</span>
+<span class="nc" id="L58">    }</span>
+
+    public String getVideo() {
+<span class="nc" id="L61">        return video;</span>
+    }
+
+    public void setVideo(String video) {
+<span class="nc" id="L65">        this.video = video;</span>
+<span class="nc" id="L66">    }</span>
+
+    
+    
+    
+    
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

@@ -17,21 +17,25 @@ public class AppMain {
 
     public static void main(String[] args) {
         Electrodomestico tele = new Television();
-        ControlRemoto controlTv= new ControlTv();
         Electrodomestico dvd= new Dvd();
+        Electrodomestico radio= new Radio();
+        Electrodomestico ventilador= new Ventilador();
+        
+        ControlRemoto controlTv= new ControlTv();
         ControlRemoto controlDvd= new ControlDvd();
-        ControlRemoto[] controles= {controlTv,controlDvd };
+        ControlRemoto controlRadio= new ControlRadio();
+        ControlRemoto controlVentilador= new ControlVentilador();
+       
+        ControlRemoto[] controles= {controlTv,controlDvd,controlRadio,controlVentilador };
         
         Familiar papa= new Padre();
-        papa.setControlesRemotos(controles);
-        controlTv=papa.getControlRemotos()[0];
+        papa.setControl(controles);
+        controlTv=papa.getControl()[0];
         controlTv.prender(tele);
-        ((ControlTv)controlTv).bajaCanal((Television)tele);
+        ((ControlTv)controlTv).cambiaCanal((Television) tele, 25);
+
         
-        
-        
-        
-        
+       
         /*Television tv=new Television();
         Ventilador venti= new Ventilador();
         Radio ra= new Radio();
