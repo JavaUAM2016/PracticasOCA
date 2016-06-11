@@ -6,7 +6,7 @@ import mx.edu.uam.practica4.electroDomestico.Radio;
  *
  * @author invited
  */
-public class ControlRadio {
+public class ControlRadio extends ControlRemoto{
     
     /*Un solo boton de encendido/apagado*/
     public void enciendeRadio(Radio r){

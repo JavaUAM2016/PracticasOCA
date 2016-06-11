@@ -2,7 +2,7 @@ package mx.edu.uam.practica4.electroDomestico;
 
 /**
  *
- * @author invited
+ * @author Isaac MG
  */
 public class Radio {
     
@@ -24,6 +24,10 @@ public class Radio {
         this.volumenActual = volumenActual;
         this.estacionesMax = estacionesMax;
         this.volMax = volMax;
+    }
+
+    public Radio() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public String getMarca() {
