@@ -27,6 +27,11 @@ public class Television extends Electrodomestico{
         this.volMaximo = volMaximo;
         this.canalMax = canalMax;
     }
+
+    public Television() {
+    }
+    
+    
     
 /*    public String getMarca() {
         return marca;
