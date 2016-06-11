@@ -1,5 +1,6 @@
 
 package mx.edu.uam.practica4.controles;
+import mx.edu.uam.practica4.aparatos.Electrodomestico;
 import mx.edu.uam.practica4.aparatos.Television;
 
 public class ControlTv extends ControlRemoto{
@@ -67,5 +68,6 @@ public class ControlTv extends ControlRemoto{
         
         
     }
+
     
 }

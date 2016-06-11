@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Television.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;JavaApp4&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">mx.edu.uam.practica4.aparatos</a> &gt; <span class="el_source">Television.java</span></div><h1>Television.java</h1><pre class="source lang-java linenums">
+package mx.edu.uam.practica4.aparatos;
+
+
+<span class="fc" id="L5">public class Television extends Electrodomestico{</span>
+    private String marca;
+    private int tamanio;
+<span class="fc" id="L8">    private boolean encendido=false; //apagada</span>
+    private int canalActual;
+    private int volActual;
+<span class="fc" id="L11">    private int volMax=30;</span>
+
+    public int getVolMax() {
+<span class="nc" id="L14">        return volMax;</span>
+    }
+    
+    public int getCanalActual() {
+<span class="nc" id="L18">        return canalActual;</span>
+    }
+
+    public String getMarca() {
+<span class="nc" id="L22">        return marca;</span>
+    }
+
+    public int getTamanio() {
+<span class="nc" id="L26">        return tamanio;</span>
+    }
+
+    public int getVolActual() {
+<span class="nc" id="L30">        return volActual;</span>
+    }
+
+    public boolean isEncendido() {
+<span class="fc" id="L34">        return encendido;</span>
+    }
+
+    public void setCanalActual(int canalActual) {
+<span class="nc" id="L38">        this.canalActual = canalActual;</span>
+<span class="nc" id="L39">    }</span>
+
+    public void setEncendido(boolean encendido) {
+<span class="fc" id="L42">        this.encendido = encendido;</span>
+<span class="fc" id="L43">    }</span>
+
+    public void setTamanio(int tamanio) {
+<span class="nc" id="L46">        this.tamanio = tamanio;</span>
+<span class="nc" id="L47">    }</span>
+
+    public void setVolActual(int volActual) {
+<span class="nc" id="L50">        this.volActual = volActual;</span>
+<span class="nc" id="L51">    }</span>
+    
+    
+      
+    
+           
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

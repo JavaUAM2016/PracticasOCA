@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>ControlVentilador.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;JavaApp4&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">mx.edu.uam.practica4.controles</a> &gt; <span class="el_source">ControlVentilador.java</span></div><h1>ControlVentilador.java</h1><pre class="source lang-java linenums">
+package mx.edu.uam.practica4.controles;
+
+
+import mx.edu.uam.practica4.aparatos.Ventilador;
+
+<span class="fc" id="L7">public class ControlVentilador extends ControlRemoto{</span>
+    
+    
+    public void prende(Ventilador ven){
+<span class="nc bnc" id="L11" title="All 2 branches missed.">        if(ven.isEncendido()==false){</span>
+<span class="nc" id="L12">            ven.setEncendido(true);</span>
+<span class="nc" id="L13">           System.out.println(&quot;Se prendio el ventilador...&quot;);</span>
+        }else
+<span class="nc" id="L15">             ven.setEncendido(false);</span>
+<span class="nc" id="L16">            System.out.println(&quot;Se apago el ventilador...&quot;);</span>
+<span class="nc" id="L17">    }</span>
+    
+    
+    
+    public void subeVel(Ventilador ven){
+<span class="nc bnc" id="L22" title="All 2 branches missed.">       if(ven.isEncendido()){</span>
+<span class="nc bnc" id="L23" title="All 2 branches missed.">           if(ven.getVelActual()&lt;ven.getVolMax()){</span>
+<span class="nc" id="L24">               ven.setVelActual(ven.getVelActual()+1);</span>
+<span class="nc" id="L25">               System.out.println(&quot;Se subio la velocidad..&quot;) ;</span>
+           }
+            
+       }else
+<span class="nc" id="L29">            System.out.println(&quot;El ventilador esta apagado, no se puede subir la velocidad..&quot;);</span>
+<span class="nc" id="L30">    }</span>
+    public void bajaVel(Ventilador ven){
+<span class="nc bnc" id="L32" title="All 2 branches missed.">        if(ven.isEncendido()){</span>
+<span class="nc bnc" id="L33" title="All 2 branches missed.">            if(ven.getVelActual()&gt;0){</span>
+<span class="nc" id="L34">                ven.setVelActual(ven.getVelActual()-1);</span>
+<span class="nc" id="L35">                System.out.println(&quot;Se bajo la velocidad..&quot;);</span>
+            }
+        }else
+<span class="nc" id="L38">            System.out.println(&quot;El ventilador  esta apagado no se puede bajar la velocidad..&quot;);</span>
+        
+<span class="nc" id="L40">    }</span>
+    
+    public void girar(Ventilador ven){
+<span class="nc bnc" id="L43" title="All 2 branches missed.">        if(ven.isEncendido()){</span>
+<span class="nc bnc" id="L44" title="All 2 branches missed.">            if(ven.isGirando()){</span>
+<span class="nc" id="L45">                System.out.println(&quot;El ventilador dejo de girar..&quot;);</span>
+            }else{
+<span class="nc" id="L47">                System.out.println(&quot;El ventilador esta girando...&quot;);</span>
+            }
+            
+        }else{
+<span class="nc" id="L51">            System.out.println(&quot;El ventilador esta apagado no puede girar..&quot;);</span>
+        }
+<span class="nc" id="L53">    }</span>
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

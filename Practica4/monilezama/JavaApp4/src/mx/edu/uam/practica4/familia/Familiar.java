@@ -16,13 +16,34 @@ public abstract class Familiar {
      private int edad;
      ControlRemoto[] control;
 
-    public void setControlesRemotos(ControlRemoto[] controles) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ControlRemoto[] getControl() {
+        return control;
     }
 
-    public ControlRemoto[] getControlRemotos() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public int getEdad() {
+        return edad;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setControl(ControlRemoto[] control) {
+        this.control = control;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    
+
+   
+    
 
     
 }
