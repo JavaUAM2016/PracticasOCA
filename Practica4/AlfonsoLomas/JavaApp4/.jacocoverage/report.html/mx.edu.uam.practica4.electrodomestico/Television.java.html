@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Television.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;JavaApp4&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">mx.edu.uam.practica4.electrodomestico</a> &gt; <span class="el_source">Television.java</span></div><h1>Television.java</h1><pre class="source lang-java linenums">package mx.edu.uam.practica4.electrodomestico;
+
+/**
+ *
+ * @author AlfonsoLomas
+ */
+public class Television extends Electrodomestico {
+    
+    private int tamanio;
+    private int canalActual;
+    private int canalMaximo;
+    private int volumenActual;
+    private int volumenMaximo;
+
+<span class="nc" id="L15">    public Television(String nombre, int tamanio, boolean encendido, int canalActual, int canalMaximo, int volumenActual, int volumenMaximo) {</span>
+<span class="nc" id="L16">        setMarca(nombre);</span>
+<span class="nc" id="L17">        setEncendido(encendido);</span>
+<span class="nc" id="L18">        setControlRemoto(null);</span>
+<span class="nc" id="L19">        this.tamanio = tamanio;</span>
+<span class="nc" id="L20">        this.canalActual = canalActual;</span>
+<span class="nc" id="L21">        this.canalMaximo = canalMaximo;</span>
+<span class="nc" id="L22">        this.volumenActual = volumenActual;</span>
+<span class="nc" id="L23">        this.volumenMaximo = volumenMaximo;</span>
+<span class="nc" id="L24">    }</span>
+
+<span class="fc" id="L26">    public Television() {</span>
+        
+<span class="fc" id="L28">    }</span>
+
+    public int getTamanio() {
+<span class="nc" id="L31">        return tamanio;</span>
+    }
+
+    public void setTamanio(int tamanio) {
+<span class="nc" id="L35">        this.tamanio = tamanio;</span>
+<span class="nc" id="L36">    }</span>
+
+    public int getCanalActual() {
+<span class="fc" id="L39">        return canalActual;</span>
+    }
+
+    public void setCanalActual(int canalActual) {
+<span class="fc" id="L43">        this.canalActual = canalActual;</span>
+<span class="fc" id="L44">    }</span>
+
+    public int getVolumenActual() {
+<span class="nc" id="L47">        return volumenActual;</span>
+    }
+
+    public int getCanalMaximo() {
+<span class="nc" id="L51">        return canalMaximo;</span>
+    }
+
+    public void setCanalMaximo(int canalMaximo) {
+<span class="nc" id="L55">        this.canalMaximo = canalMaximo;</span>
+<span class="nc" id="L56">    }</span>
+
+    public void setVolumenActual(int volumenActual) {
+<span class="nc" id="L59">        this.volumenActual = volumenActual;</span>
+<span class="nc" id="L60">    }</span>
+
+    public int getVolumenMaximo() {
+<span class="nc" id="L63">        return volumenMaximo;</span>
+    }
+
+    public void setVolumenMaximo(int volumenMaximo) {
+<span class="nc" id="L67">        this.volumenMaximo = volumenMaximo;</span>
+<span class="nc" id="L68">    }</span>
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

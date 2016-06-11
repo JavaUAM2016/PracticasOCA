@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>ControlRemoto.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;JavaApp4&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">mx.edu.uam.practica4.control</a> &gt; <span class="el_source">ControlRemoto.java</span></div><h1>ControlRemoto.java</h1><pre class="source lang-java linenums">package mx.edu.uam.practica4.control;
+
+import mx.edu.uam.practica4.electrodomestico.Electrodomestico;
+
+/**
+ *
+ * @author invited
+ */
+<span class="fc" id="L9">public abstract class ControlRemoto {</span>
+    
+    private int numBaterias;
+    private String tipoBaterias;
+
+     public void encender(Electrodomestico electrodomestico){
+<span class="pc bpc" id="L15" title="1 of 2 branches missed.">        if(!electrodomestico.isEncendido()){</span>
+<span class="fc" id="L16">            electrodomestico.setEncendido(true);</span>
+<span class="fc" id="L17">            System.out.println(&quot;Prendiendo... ...&quot;);</span>
+        }else{
+<span class="nc" id="L19">            System.out.println(&quot;Ya està prendido&quot;);</span>
+        }
+<span class="fc" id="L21">    }</span>
+    
+    public void apagar(Electrodomestico electrodomestico){
+<span class="nc bnc" id="L24" title="All 2 branches missed.">        if(electrodomestico.isEncendido()){</span>
+<span class="nc" id="L25">            electrodomestico.setEncendido(false);</span>
+<span class="nc" id="L26">            System.out.println(&quot;Apagando... ...&quot;);</span>
+        }else{
+<span class="nc" id="L28">            System.out.println(&quot;Zzzzzzzzz....&quot;);</span>
+        }
+<span class="nc" id="L30">    }</span>
+    
+    public int getNumBaterias() {
+<span class="nc" id="L33">        return numBaterias;</span>
+    }
+
+    public void setNumBaterias(int numBaterias) {
+<span class="nc" id="L37">        this.numBaterias = numBaterias;</span>
+<span class="nc" id="L38">    }</span>
+
+    public String getTipoBaterias() {
+<span class="nc" id="L41">        return tipoBaterias;</span>
+    }
+
+    public void setTipoBaterias(String tipoBaterias) {
+<span class="nc" id="L45">        this.tipoBaterias = tipoBaterias;</span>
+<span class="nc" id="L46">    }</span>
+       
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>
