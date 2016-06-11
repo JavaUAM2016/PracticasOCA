@@ -9,6 +9,10 @@ public class ControlTelevision extends Control{
         setNumPilas(numPilas);
     }
     
+    public ControlTelevision(){
+        
+    }
+    
     public void subeVol(Television tv){
         if(tv.isEncendido()){
             if(tv.getVolumenActual()<tv.getVolMaximo())

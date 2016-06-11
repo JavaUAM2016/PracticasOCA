@@ -9,6 +9,10 @@ public class ControlXbox extends Control{
         setNumPilas(numPilas);
     }
     
+    public ControlXbox(){
+        
+    }
+    
     public void onOffInternet(Xbox360 xbox){
         if(xbox.isEncendido()){
              if(xbox.isConexionInternet()){

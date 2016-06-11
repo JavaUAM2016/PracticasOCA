@@ -18,6 +18,10 @@ public class Xbox360 extends Electrodomestico{
         this.controlesMax=controlesMax;
         this.charolaAbierta=charolaAbierta;
     }
+    
+    public Xbox360(){
+        
+    }
 
     public boolean isConexionInternet() {
         return conexionInternet;
