@@ -5,11 +5,11 @@ package mx.edu.uam.practica4.electroDomestico;
  * @author Isaac MG
  * @version 28/05/2016
  */
-public class Television {
+public class Television extends Electrodomestico{
     
-    private String marca;
+    //private String marca;
     private int tamano;
-    private boolean encendido;
+    //private boolean encendido;
     private int  canalActual;
     private int volumenActual;
     private int volMaximo;
@@ -17,23 +17,30 @@ public class Television {
     
             
     public Television(String marca, int tamano, boolean encendido, int canalActual, int volumenActual, int volMaximo,int canalMax) {
-        this.marca = marca;
+        
+        super.setMarca(marca);
+        super.setEstaPrendido(encendido);
+        
         this.tamano = tamano;
-        this.encendido = encendido;
         this.canalActual = canalActual;
         this.volumenActual = volumenActual;
         this.volMaximo = volMaximo;
         this.canalMax = canalMax;
     }
+
+    public Television() {
+    }
     
-    public String getMarca() {
+    
+    
+/*    public String getMarca() {
         return marca;
     }
 
     public void setMarca(String marca) {
         this.marca = marca;
     }
-
+*/
     public int getTamano() {
         return tamano;
     }
@@ -43,11 +50,12 @@ public class Television {
     }
 
     public boolean isEncendido() {
-        return encendido;
+        return super.isEstaPrendido();
     }
 
     public void setEncendido(boolean encendido) {
-        this.encendido = encendido;
+        //this.encendido = encendido;
+        super.setEstaPrendido(encendido);
     }
 
     public int getCanalActual() {
@@ -81,6 +89,5 @@ public class Television {
     public void setCanalMax(int canalMax) {
         this.canalMax = canalMax;
     }
- 
     
 }

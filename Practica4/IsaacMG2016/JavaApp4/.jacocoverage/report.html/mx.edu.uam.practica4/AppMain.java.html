@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>AppMain.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;JavaApp4&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">mx.edu.uam.practica4</a> &gt; <span class="el_source">AppMain.java</span></div><h1>AppMain.java</h1><pre class="source lang-java linenums">
+package mx.edu.uam.practica4;
+
+import mx.edu.uam.practica4.control.ControlRadio;
+import mx.edu.uam.practica4.control.ControlRemoto;
+import mx.edu.uam.practica4.control.ControlTv;
+import mx.edu.uam.practica4.electroDomestico.Electrodomestico;
+import mx.edu.uam.practica4.electroDomestico.Radio;
+import mx.edu.uam.practica4.electroDomestico.Television;
+import mx.edu.uam.practica4.familia.Familiar;
+import mx.edu.uam.practica4.familia.Padre;
+
+/**
+ *
+ * @author invited
+ */
+<span class="nc" id="L17">public class AppMain {</span>
+
+   
+    public static void main(String[] args) {
+        
+                                 // marca,   tam, encendido canalActual,volumenActual, volMaximo,canalMax
+<span class="nc" id="L23">        Electrodomestico sony = new Television(&quot;Sony Inc&quot;,50,true,52,25,99,200);</span>
+<span class="nc" id="L24">        ControlRemoto crTv = new ControlTv();</span>
+<span class="nc" id="L25">        ControlRemoto crRadio = new ControlRadio();</span>
+        
+<span class="nc" id="L27">        ControlRemoto[] controles ={crTv,crRadio};</span>
+<span class="nc" id="L28">        Familiar padre = new Padre(&quot;Ponchito&quot;,32, controles,&quot;Nada&quot;,0);</span>
+        
+<span class="nc" id="L30">        crTv = padre.getControl()[0];</span>
+<span class="nc" id="L31">        crTv.apagar(sony);</span>
+<span class="nc" id="L32">        ((ControlTv)crTv).bajaCanal((Television)sony);</span>
+        
+        
+        
+        //String marca, int wattsPotencia, boolean encendido, double estacionActual, int volumenActual, double estacionesMax, int volMax)
+//        Electrodomestico radio = new Radio(&quot;Sorny&quot;,100000,true,200.5,20,600.5,50;
+//        crTv.encender(sony);
+//        cr.apagar(sony);
+/*        ControlTv ctrlSony = new ControlTv();
+        ctrlSony.enciendeTv(sony);
+        ctrlSony.subeVolumen(sony);
+        ctrlSony.cambiaCanal(sony, 14);
+        ctrlSony.bajaCanal(sony);
+        ctrlSony.apagaTv(sony);
+        ctrlSony.apagaTv(sony);
+        ctrlSony.enciendeTv(sony);
+        ctrlSony.cambiaCanal(sony,202);
+*/
+        
+        
+        
+<span class="nc" id="L53">    }    </span>
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

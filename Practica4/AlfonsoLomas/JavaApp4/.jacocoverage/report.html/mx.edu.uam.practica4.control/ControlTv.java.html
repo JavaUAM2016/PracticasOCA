@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>ControlTv.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;JavaApp4&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">mx.edu.uam.practica4.control</a> &gt; <span class="el_source">ControlTv.java</span></div><h1>ControlTv.java</h1><pre class="source lang-java linenums">package mx.edu.uam.practica4.control;
+
+import mx.edu.uam.practica4.electrodomestico.Television;
+
+/**
+ *
+ * @author AlfonsoLomas
+ */
+<span class="fc" id="L9">public class ControlTv extends ControlRemoto {</span>
+
+//    public void powerTv(Television tv) {
+//        if (tv.isEncendido()) {
+//            tv.setEncendido(false);
+//            System.out.println(&quot;El televisor se esta apagando!!!&quot;);
+//        } else {
+//            tv.setEncendido(true);
+//            System.out.println(&quot;El televisor se acaba de encender&quot;);
+//            System.out.println(&quot;Volumen: &quot; + tv.getVolumenActual());
+//            System.out.println(&quot;Canal: &quot; + tv.getCanalActual());
+//
+//        }
+//    }
+
+    public void subeVolumen(Television tv) {
+<span class="nc bnc" id="L25" title="All 2 branches missed.">        if (tv.isEncendido()) {</span>
+<span class="nc bnc" id="L26" title="All 2 branches missed.">            if (tv.getVolumenActual() &lt; tv.getVolumenMaximo()) {</span>
+<span class="nc" id="L27">                tv.setVolumenActual(tv.getVolumenActual() + 1);</span>
+<span class="nc" id="L28">                System.out.println(&quot;Volumen: &quot; + tv.getVolumenActual());</span>
+            } else {
+<span class="nc" id="L30">                System.out.println(&quot;El volumen està al màximo!!!&quot;);</span>
+<span class="nc" id="L31">                System.out.println(&quot;Volumen: &quot; + tv.getVolumenActual());</span>
+            }
+        } else {
+<span class="nc" id="L34">            System.out.println(&quot;La tv està apagada&quot;);</span>
+        }
+<span class="nc" id="L36">    }</span>
+
+    public void bajaVolumen(Television tv) {
+<span class="nc bnc" id="L39" title="All 2 branches missed.">        if (tv.isEncendido()) {</span>
+<span class="nc bnc" id="L40" title="All 2 branches missed.">            if (tv.getVolumenActual() &lt;= 0) {</span>
+<span class="nc" id="L41">                tv.setVolumenActual(0);</span>
+<span class="nc" id="L42">                System.out.println(&quot;El volumen està al mìnimo&quot;);</span>
+<span class="nc" id="L43">                System.out.println(&quot;Volumen: &quot; + tv.getVolumenActual());</span>
+            } else {
+<span class="nc" id="L45">                tv.setVolumenActual(tv.getVolumenActual() - 1);</span>
+<span class="nc" id="L46">                System.out.println(&quot;Volumen: &quot; + tv.getVolumenActual());</span>
+            }
+        } else {
+<span class="nc" id="L49">            System.out.println(&quot;La tv està apagada&quot;);</span>
+        }
+<span class="nc" id="L51">    }</span>
+
+    public void subeCanal(Television tv) {
+<span class="nc bnc" id="L54" title="All 2 branches missed.">        if (tv.isEncendido()) {</span>
+<span class="nc bnc" id="L55" title="All 2 branches missed.">            if (tv.getCanalActual() &lt; tv.getCanalMaximo()) {</span>
+<span class="nc" id="L56">                tv.setCanalActual(tv.getCanalActual() + 1);</span>
+<span class="nc" id="L57">                System.out.println(&quot;Canal: &quot; + tv.getCanalActual());</span>
+            } else {
+<span class="nc" id="L59">                tv.setCanalActual(1);</span>
+<span class="nc" id="L60">                System.out.println(&quot;Canal: &quot; + tv.getCanalActual());</span>
+            }
+        } else {
+<span class="nc" id="L63">            System.out.println(&quot;La tv està apagada&quot;);</span>
+        }
+<span class="nc" id="L65">    }</span>
+
+    public void bajaCanal(Television tv) {
+<span class="nc bnc" id="L68" title="All 2 branches missed.">        if (tv.isEncendido()) {</span>
+<span class="nc bnc" id="L69" title="All 2 branches missed.">            if (tv.getCanalActual() &lt;= 1) {</span>
+<span class="nc" id="L70">                tv.setCanalActual(tv.getCanalMaximo());</span>
+<span class="nc" id="L71">                System.out.println(&quot;Canal: &quot; + tv.getCanalActual());</span>
+            } else {
+<span class="nc" id="L73">                tv.setCanalActual(tv.getCanalActual() - 1);</span>
+<span class="nc" id="L74">                System.out.println(&quot;Canal: &quot; + tv.getCanalActual());</span>
+            }
+        } else {
+<span class="nc" id="L77">            System.out.println(&quot;La tv està apagada&quot;);</span>
+        }
+<span class="nc" id="L79">    }</span>
+
+    public void cambiaCanal(Television tv, int canal) {
+<span class="pc bpc" id="L82" title="1 of 2 branches missed.">        if (tv.isEncendido()) {</span>
+<span class="fc" id="L83">            tv.setCanalActual(canal);</span>
+<span class="fc" id="L84">            System.out.println(&quot;Canal: &quot; + tv.getCanalActual());</span>
+        } else {
+<span class="nc" id="L86">            System.out.println(&quot;La tv està apagada&quot;);</span>
+        }
+<span class="fc" id="L88">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

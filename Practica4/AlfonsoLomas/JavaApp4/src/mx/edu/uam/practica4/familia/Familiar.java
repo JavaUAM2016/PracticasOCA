@@ -35,7 +35,5 @@ public abstract class Familiar {
     public void setControlRemoto(ControlRemoto[] controlRemoto) {
         this.controlRemoto = controlRemoto;
     }
-    
-    
-    
+        
 }

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>ControlVentilador.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;JavaApp4&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">mx.edu.uam.practica4.control</a> &gt; <span class="el_source">ControlVentilador.java</span></div><h1>ControlVentilador.java</h1><pre class="source lang-java linenums">package mx.edu.uam.practica4.control;
+
+import mx.edu.uam.practica4.electrodomestico.Ventilador;
+
+/**
+ *
+ * @author invited
+ */
+<span class="nc" id="L9">public class ControlVentilador extends ControlRemoto{</span>
+
+    public void powerVentilador(Ventilador ventilador) {
+<span class="nc bnc" id="L12" title="All 2 branches missed.">        if (ventilador.isEncendido()) {</span>
+<span class="nc" id="L13">            ventilador.setEncendido(false);</span>
+<span class="nc" id="L14">            System.out.println(&quot;El ventilador se esta apagando!!!&quot;);</span>
+        } else {
+<span class="nc" id="L16">            ventilador.setEncendido(true);</span>
+<span class="nc" id="L17">            System.out.println(&quot;El ventilador se acaba de encender&quot;);</span>
+<span class="nc" id="L18">            System.out.println(&quot;Velocidad: &quot; + ventilador.getVelocidadActual());</span>
+        }
+<span class="nc" id="L20">    }</span>
+
+    public void subeVelocidad(Ventilador ventilador) {
+<span class="nc bnc" id="L23" title="All 2 branches missed.">        if (ventilador.isEncendido()) {</span>
+<span class="nc bnc" id="L24" title="All 2 branches missed.">            if (ventilador.getVelocidadActual() &lt; ventilador.getVelocidadMaxima()) {</span>
+<span class="nc" id="L25">                ventilador.setVelocidadActual(ventilador.getVelocidadActual() + 1);</span>
+<span class="nc" id="L26">                System.out.println(&quot;Velocidad: &quot; + ventilador.getVelocidadActual());</span>
+            } else {
+<span class="nc" id="L28">                System.out.println(&quot;La velocidad està al màximo!&quot;);</span>
+<span class="nc" id="L29">                System.out.println(&quot;Velocidad: &quot; + +ventilador.getVelocidadActual());</span>
+            }
+        } else {
+<span class="nc" id="L32">            System.out.println(&quot;Ventilador apagado&quot;);</span>
+        }
+<span class="nc" id="L34">    }</span>
+    
+    public void bajaVelocidad(Ventilador ventilador){
+<span class="nc bnc" id="L37" title="All 2 branches missed.">        if(ventilador.isEncendido()){</span>
+<span class="nc bnc" id="L38" title="All 2 branches missed.">            if(ventilador.getVelocidadActual() &lt;= 0){</span>
+<span class="nc" id="L39">                ventilador.setVelocidadActual(0);</span>
+<span class="nc" id="L40">                System.out.println(&quot;La velocidad està al mìnimo!&quot;);</span>
+<span class="nc" id="L41">                System.out.println(&quot;Velocidad: &quot; + +ventilador.getVelocidadActual());</span>
+            }else{
+<span class="nc" id="L43">                ventilador.setVelocidadActual(ventilador.getVelocidadActual()-1);</span>
+<span class="nc" id="L44">                System.out.println(&quot;Velocidad: &quot; + +ventilador.getVelocidadActual());</span>
+            }
+        } else {
+<span class="nc" id="L47">            System.out.println(&quot;Ventilador apagado&quot;);</span>
+        }
+<span class="nc" id="L49">    }</span>
+    
+    public void cambiaVelocidad(Ventilador ventilador, int velocidad){
+<span class="nc bnc" id="L52" title="All 2 branches missed.">        if(ventilador.isEncendido()){</span>
+<span class="nc" id="L53">            ventilador.setVelocidadActual(velocidad);</span>
+<span class="nc" id="L54">            System.out.println(&quot;Velocidad: &quot; + +ventilador.getVelocidadActual());</span>
+        } else {
+<span class="nc" id="L56">            System.out.println(&quot;Ventilador apagado&quot;);</span>
+        }
+<span class="nc" id="L58">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

@@ -8,18 +8,18 @@ import mx.edu.uam.practica4.electrodomestico.Television;
  */
 public class ControlTv extends ControlRemoto {
 
-    public void powerTv(Television tv) {
-        if (tv.isEncendido()) {
-            tv.setEncendido(false);
-            System.out.println("El televisor se esta apagando!!!");
-        } else {
-            tv.setEncendido(true);
-            System.out.println("El televisor se acaba de encender");
-            System.out.println("Volumen: " + tv.getVolumenActual());
-            System.out.println("Canal: " + tv.getCanalActual());
-
-        }
-    }
+//    public void powerTv(Television tv) {
+//        if (tv.isEncendido()) {
+//            tv.setEncendido(false);
+//            System.out.println("El televisor se esta apagando!!!");
+//        } else {
+//            tv.setEncendido(true);
+//            System.out.println("El televisor se acaba de encender");
+//            System.out.println("Volumen: " + tv.getVolumenActual());
+//            System.out.println("Canal: " + tv.getCanalActual());
+//
+//        }
+//    }
 
     public void subeVolumen(Television tv) {
         if (tv.isEncendido()) {

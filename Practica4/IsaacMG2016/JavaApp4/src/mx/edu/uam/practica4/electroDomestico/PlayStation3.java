@@ -2,13 +2,13 @@ package mx.edu.uam.practica4.electroDomestico;
 
 /**
  *
- * @author invited
+ * @author Isaac MG
  */
-public class PlayStation3 {
+public class PlayStation3 extends Electrodomestico{
     
-    private String marca;
+    //private String marca;
     private int discoDuro;
-    private boolean encendido;
+    //private boolean encendido;
     private boolean wifi;
     private int jugadores;
     private int videoJuegosInstall;
@@ -18,9 +18,11 @@ public class PlayStation3 {
     private int videoJuegoActual;// no va 
 
     public PlayStation3(String marca, int discoDuro, boolean encendido, boolean wifi, int jugadores, int videoJuegosInstall, int capacidadDiscoDuroMax, int noJugadoresMax, int videoJuegoActual) {
-        this.marca = marca;
+        
+        super.setMarca(marca);
+        super.setEstaPrendido(encendido);
+        
         this.discoDuro = discoDuro;
-        this.encendido = encendido;
         this.wifi = wifi;
         this.jugadores = jugadores;
         this.videoJuegosInstall = videoJuegosInstall;
@@ -29,14 +31,14 @@ public class PlayStation3 {
         this.videoJuegoActual = videoJuegoActual;
     }
 
-    public String getMarca() {
+/*    public String getMarca() {
         return marca;
     }
 
     public void setMarca(String marca) {
         this.marca = marca;
     }
-
+*/
     public int getDiscoDuro() {
         return discoDuro;
     }
@@ -46,11 +48,12 @@ public class PlayStation3 {
     }
 
     public boolean isEncendido() {
-        return encendido;
+        return super.isEstaPrendido();
     }
 
     public void setEncendido(boolean encendido) {
-        this.encendido = encendido;
+        //this.encendido = encendido;
+        super.setEstaPrendido(encendido);
     }
 
     public boolean isWifi() {

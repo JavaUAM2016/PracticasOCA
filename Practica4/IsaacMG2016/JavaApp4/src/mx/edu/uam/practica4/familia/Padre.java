@@ -4,7 +4,7 @@ import mx.edu.uam.practica4.control.ControlRemoto;
 
 /**
  *
- * @author invited
+ * @author Isaac MG
  */
 public class Padre extends Familiar{
     

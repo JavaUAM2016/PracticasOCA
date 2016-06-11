@@ -2,7 +2,7 @@ package mx.edu.uam.practica4.electroDomestico;
 
 /**
  *
- * @author invited
+ * @author Isaac MG
  */
 public class Radio {
     

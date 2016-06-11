@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>ControlPs3.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;JavaApp4&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">mx.edu.uam.practica4.control</a> &gt; <span class="el_source">ControlPs3.java</span></div><h1>ControlPs3.java</h1><pre class="source lang-java linenums">package mx.edu.uam.practica4.control;
+
+import mx.edu.uam.practica4.electroDomestico.Electrodomestico;
+import mx.edu.uam.practica4.electroDomestico.PlayStation3;
+
+/**
+ *
+ * @author invited
+ */
+<span class="nc" id="L10">public class ControlPs3 extends ControlRemoto{</span>
+    
+    //public void enciendePs3(PlayStation3 ps3){
+    
+     public void encender(PlayStation3 ps3){
+<span class="nc bnc" id="L15" title="All 2 branches missed.">        if(!ps3.isEncendido()){//apagado</span>
+<span class="nc" id="L16">            ps3.setEncendido(true);</span>
+<span class="nc" id="L17">            System.out.println(&quot;PS3 &lt;&lt; ON &gt;&gt;\n&quot;);</span>
+        }
+        else{
+<span class="nc" id="L20">            ps3.setEncendido(false);</span>
+<span class="nc" id="L21">            System.out.println(&quot;PS3 [ Reset/OFF ]\n&quot;);</span>
+        }
+<span class="nc" id="L23">    }</span>
+    
+    //public void apagaPs3(PlayStation3 ps3){
+    public void apagar(PlayStation3 ps3){
+<span class="nc bnc" id="L27" title="All 2 branches missed.">        if(ps3.isEncendido()){</span>
+<span class="nc" id="L28">            ps3.setEncendido(false);</span>
+<span class="nc" id="L29">            System.out.println(&quot;PS3 [ OFF ]\n&quot;);</span>
+        }
+        else{
+<span class="nc" id="L32">            ps3.setEncendido(true);</span>
+<span class="nc" id="L33">            System.out.println(&quot;PS3 &lt;&lt; ON &gt;&gt;\n&quot;);</span>
+        }
+<span class="nc" id="L35">    }</span>
+    
+    public boolean conectaInternet(PlayStation3 ps3){
+<span class="nc bnc" id="L38" title="All 2 branches missed.">        if(!ps3.isWifi()){//wifi apagado</span>
+<span class="nc" id="L39">            System.out.println(&quot;PlayStation Network Sin Conexion...\n&quot;);</span>
+<span class="nc" id="L40">            return false;</span>
+        }
+        else{
+<span class="nc" id="L43">            System.out.println(&quot;PlayStation Network Conectando...\n&quot;);</span>
+<span class="nc" id="L44">            return true;</span>
+        }
+    }
+    
+    public void descargaJuego(PlayStation3 ps3,int tamJuego){
+<span class="nc bnc" id="L49" title="All 2 branches missed.">        if(conectaInternet(ps3))</span>
+<span class="nc bnc" id="L50" title="All 2 branches missed.">            if(tamJuego &lt;= ps3.getCapacidadDiscoDuroMax())</span>
+<span class="nc" id="L51">                System.out.println(&quot;Iniciando Descarga...please wait\n&quot;);</span>
+            else
+<span class="nc" id="L53">                System.out.println(&quot;Capacidad Disco Duro Insuficiente..\n&quot;);</span>
+        else
+<span class="nc" id="L55">            System.out.println(&quot;Comprube su conexion a Internet ??\n&quot;);</span>
+<span class="nc" id="L56">    }</span>
+    
+    public void cargaJuego(PlayStation3 ps3,int noJuego){
+<span class="nc bnc" id="L59" title="All 4 branches missed.">        if(noJuego &gt; 0 &amp;&amp; noJuego &lt;= ps3.getVideoJuegosInstall()){</span>
+<span class="nc" id="L60">            ps3.setVideoJuegoActual(noJuego);</span>
+<span class="nc" id="L61">            System.out.println(&quot;Juego [&quot;+ps3.getVideoJuegoActual()+&quot;] Cargando...\n&quot;);</span>
+        }
+        else
+<span class="nc" id="L64">            System.out.println(&quot;Número de Juego No valido...Exit\n&quot;);</span>
+<span class="nc" id="L65">    }</span>
+    
+    public void agregaJugador(PlayStation3 ps3){
+<span class="nc bnc" id="L68" title="All 4 branches missed.">        if(ps3.getJugadores() &gt;= 0 &amp;&amp; ps3.getJugadores()&lt; ps3.getNoJugadoresMax()){</span>
+<span class="nc" id="L69">            ps3.setJugadores(ps3.getJugadores()+1);</span>
+<span class="nc" id="L70">            System.out.println(&quot;Nuevo Jugador Agregado..\n&quot;);</span>
+        }
+        else
+<span class="nc" id="L73">            System.out.println(&quot;Operacion Invalida No se pueden agregar mas Jugadores.\n&quot;);</span>
+<span class="nc" id="L74">    }</span>
+
+   
+    
+}//fin class
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

@@ -7,17 +7,17 @@ import mx.edu.uam.practica4.electroDomestico.Television;
  * @author Isaac MG
  * @version 
  */
-public class ControlTv {
+public class ControlTv extends ControlRemoto{
     
-    public boolean estaEncendida(Television tv){
+/*    public boolean estaEncendida(Television tv){
         
         if(tv.isEncendido())
             return true;
         else
             return false;
     }
-    
-    public void enciendeTv(Television tv){
+*/    
+/*    public void enciendeTv(Television tv){
         
         if(!estaEncendida(tv)){
             System.out.println("Television encendida");
@@ -26,22 +26,35 @@ public class ControlTv {
             System.out.println("El televisor esta encendido tecla no valida ");
         }
     }
+*/    
+//    public void enciendeTv(Television tv){
+//        super.encender(tv);
+//    }
     
-    public void apagaTv(Television tv){
+/*    public void apagaTv(Television tv){
         if(estaEncendida(tv)){
             System.out.println("television Apagando !!");
             tv.setEncendido(false);   
         }else
             System.out.println("La televisor apagado tecla no valida");
     }
+*/  
+//    public void apagaTv(Television tv){
+//        super.apagar(tv);
+//        
+//    }
     
     public void subeVolumen(Television tv){
-        if(tv.getVolumenActual() == tv.getVolMaximo())
-            System.out.println("El televisor ya esta en el volumen maximo tecla invalida");
-        else{
-            tv.setVolumenActual(tv.getVolumenActual()+1);
-            System.out.println("VOL - ||||||||||||||||||||||||||| + "+ tv.getVolumenActual());
-        }
+       
+        if(tv.isEstaPrendido())
+            if(tv.getVolumenActual() == tv.getVolMaximo())
+                System.out.println("El televisor ya esta en el volumen maximo tecla invalida");
+            else{
+                tv.setVolumenActual(tv.getVolumenActual()+1);
+                System.out.println("VOL - ||||||||||||||||||||||||||| + "+ tv.getVolumenActual());
+            }
+        else
+            System.out.println("El Televisor esta Apagado.. "+ Math.abs(22));
     } 
     
     public void bajaVolumen(Television tv){

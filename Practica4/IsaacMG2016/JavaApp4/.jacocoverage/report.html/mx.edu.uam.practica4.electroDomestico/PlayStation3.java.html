@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>PlayStation3.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;JavaApp4&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">mx.edu.uam.practica4.electroDomestico</a> &gt; <span class="el_source">PlayStation3.java</span></div><h1>PlayStation3.java</h1><pre class="source lang-java linenums">package mx.edu.uam.practica4.electroDomestico;
+
+/**
+ *
+ * @author Isaac MG
+ */
+public class PlayStation3 extends Electrodomestico{
+    
+    //private String marca;
+    private int discoDuro;
+    //private boolean encendido;
+    private boolean wifi;
+    private int jugadores;
+    private int videoJuegosInstall;
+    
+    private int capacidadDiscoDuroMax;
+    private int noJugadoresMax;
+    private int videoJuegoActual;// no va 
+
+<span class="nc" id="L20">    public PlayStation3(String marca, int discoDuro, boolean encendido, boolean wifi, int jugadores, int videoJuegosInstall, int capacidadDiscoDuroMax, int noJugadoresMax, int videoJuegoActual) {</span>
+        
+<span class="nc" id="L22">        super.setMarca(marca);</span>
+<span class="nc" id="L23">        super.setEstaPrendido(encendido);</span>
+        
+<span class="nc" id="L25">        this.discoDuro = discoDuro;</span>
+<span class="nc" id="L26">        this.wifi = wifi;</span>
+<span class="nc" id="L27">        this.jugadores = jugadores;</span>
+<span class="nc" id="L28">        this.videoJuegosInstall = videoJuegosInstall;</span>
+<span class="nc" id="L29">        this.capacidadDiscoDuroMax = capacidadDiscoDuroMax;</span>
+<span class="nc" id="L30">        this.noJugadoresMax = noJugadoresMax;</span>
+<span class="nc" id="L31">        this.videoJuegoActual = videoJuegoActual;</span>
+<span class="nc" id="L32">    }</span>
+
+/*    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+*/
+    public int getDiscoDuro() {
+<span class="nc" id="L43">        return discoDuro;</span>
+    }
+
+    public void setDiscoDuro(int discoDuro) {
+<span class="nc" id="L47">        this.discoDuro = discoDuro;</span>
+<span class="nc" id="L48">    }</span>
+
+    public boolean isEncendido() {
+<span class="nc" id="L51">        return super.isEstaPrendido();</span>
+    }
+
+    public void setEncendido(boolean encendido) {
+        //this.encendido = encendido;
+<span class="nc" id="L56">        super.setEstaPrendido(encendido);</span>
+<span class="nc" id="L57">    }</span>
+
+    public boolean isWifi() {
+<span class="nc" id="L60">        return wifi;</span>
+    }
+
+    public void setWifi(boolean wifi) {
+<span class="nc" id="L64">        this.wifi = wifi;</span>
+<span class="nc" id="L65">    }</span>
+
+    public int getJugadores() {
+<span class="nc" id="L68">        return jugadores;</span>
+    }
+
+    public void setJugadores(int jugadores) {
+<span class="nc" id="L72">        this.jugadores = jugadores;</span>
+<span class="nc" id="L73">    }</span>
+
+    public int getVideoJuegosInstall() {
+<span class="nc" id="L76">        return videoJuegosInstall;</span>
+    }
+
+    public void setVideoJuegosInstall(int videoJuegosInstall) {
+<span class="nc" id="L80">        this.videoJuegosInstall = videoJuegosInstall;</span>
+<span class="nc" id="L81">    }</span>
+
+    public int getCapacidadDiscoDuroMax() {
+<span class="nc" id="L84">        return capacidadDiscoDuroMax;</span>
+    }
+
+    public void setCapacidadDiscoDuroMax(int capacidadDiscoDuroMax) {
+<span class="nc" id="L88">        this.capacidadDiscoDuroMax = capacidadDiscoDuroMax;</span>
+<span class="nc" id="L89">    }</span>
+
+    public int getNoJugadoresMax() {
+<span class="nc" id="L92">        return noJugadoresMax;</span>
+    }
+
+    public void setNoJugadoresMax(int noJugadoresMax) {
+<span class="nc" id="L96">        this.noJugadoresMax = noJugadoresMax;</span>
+<span class="nc" id="L97">    }</span>
+
+    public int getVideoJuegoActual() {
+<span class="nc" id="L100">        return videoJuegoActual;</span>
+    }
+
+    public void setVideoJuegoActual(int videoJuegoActual) {
+<span class="nc" id="L104">        this.videoJuegoActual = videoJuegoActual;</span>
+<span class="nc" id="L105">    }</span>
+
+}//fin class
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>
