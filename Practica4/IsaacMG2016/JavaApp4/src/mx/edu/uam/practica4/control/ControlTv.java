@@ -45,12 +45,16 @@ public class ControlTv extends ControlRemoto{
 //    }
     
     public void subeVolumen(Television tv){
-        if(tv.getVolumenActual() == tv.getVolMaximo())
-            System.out.println("El televisor ya esta en el volumen maximo tecla invalida");
-        else{
-            tv.setVolumenActual(tv.getVolumenActual()+1);
-            System.out.println("VOL - ||||||||||||||||||||||||||| + "+ tv.getVolumenActual());
-        }
+       
+        if(tv.isEstaPrendido())
+            if(tv.getVolumenActual() == tv.getVolMaximo())
+                System.out.println("El televisor ya esta en el volumen maximo tecla invalida");
+            else{
+                tv.setVolumenActual(tv.getVolumenActual()+1);
+                System.out.println("VOL - ||||||||||||||||||||||||||| + "+ tv.getVolumenActual());
+            }
+        else
+            System.out.println("El Televisor esta Apagado.. "+ Math.abs(22));
     } 
     
     public void bajaVolumen(Television tv){

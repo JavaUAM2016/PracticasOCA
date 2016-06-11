@@ -26,10 +26,6 @@ public class Radio {
         this.volMax = volMax;
     }
 
-    public Radio() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     public String getMarca() {
         return marca;
     }

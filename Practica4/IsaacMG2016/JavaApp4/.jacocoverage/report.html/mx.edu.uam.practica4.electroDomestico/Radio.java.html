@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Radio.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;JavaApp4&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">mx.edu.uam.practica4.electroDomestico</a> &gt; <span class="el_source">Radio.java</span></div><h1>Radio.java</h1><pre class="source lang-java linenums">package mx.edu.uam.practica4.electroDomestico;
+
+/**
+ *
+ * @author Isaac MG
+ */
+public class Radio {
+    
+    private String marca;
+    private int wattsPotencia;
+    private boolean encendido;
+    private double estacionActual;
+    private int volumenActual;
+    
+    private double estacionesMax;
+    private int volMax;
+
+    /*Constructor*/
+<span class="nc" id="L19">    public Radio(String marca, int wattsPotencia, boolean encendido, double estacionActual, int volumenActual, double estacionesMax, int volMax) {</span>
+<span class="nc" id="L20">        this.marca = marca;</span>
+<span class="nc" id="L21">        this.wattsPotencia = wattsPotencia;</span>
+<span class="nc" id="L22">        this.encendido = encendido;</span>
+<span class="nc" id="L23">        this.estacionActual = estacionActual;</span>
+<span class="nc" id="L24">        this.volumenActual = volumenActual;</span>
+<span class="nc" id="L25">        this.estacionesMax = estacionesMax;</span>
+<span class="nc" id="L26">        this.volMax = volMax;</span>
+<span class="nc" id="L27">    }</span>
+
+    public String getMarca() {
+<span class="nc" id="L30">        return marca;</span>
+    }
+
+    public void setMarca(String marca) {
+<span class="nc" id="L34">        this.marca = marca;</span>
+<span class="nc" id="L35">    }</span>
+
+    public int getWattsPotencia() {
+<span class="nc" id="L38">        return wattsPotencia;</span>
+    }
+
+    public void setWattsPotencia(int wattsPotencia) {
+<span class="nc" id="L42">        this.wattsPotencia = wattsPotencia;</span>
+<span class="nc" id="L43">    }</span>
+
+    public boolean isEncendido() {
+<span class="nc" id="L46">        return encendido;</span>
+    }
+
+    public void setEncendido(boolean encendido) {
+<span class="nc" id="L50">        this.encendido = encendido;</span>
+<span class="nc" id="L51">    }</span>
+
+    public double getEstacionActual() {
+<span class="nc" id="L54">        return estacionActual;</span>
+    }
+
+    public void setEstacionActual(double estacionActual) {
+<span class="nc" id="L58">        this.estacionActual = estacionActual;</span>
+<span class="nc" id="L59">    }</span>
+
+    public int getVolumenActual() {
+<span class="nc" id="L62">        return volumenActual;</span>
+    }
+
+    public void setVolumenActual(int volumenActual) {
+<span class="nc" id="L66">        this.volumenActual = volumenActual;</span>
+<span class="nc" id="L67">    }</span>
+
+    public double getEstacionesMax() {
+<span class="nc" id="L70">        return estacionesMax;</span>
+    }
+
+    public void setEstacionesMax(double estacionesMax) {
+<span class="nc" id="L74">        this.estacionesMax = estacionesMax;</span>
+<span class="nc" id="L75">    }</span>
+
+    public int getVolMax() {
+<span class="nc" id="L78">        return volMax;</span>
+    }
+
+    public void setVolMax(int volMax) {
+<span class="nc" id="L82">        this.volMax = volMax;</span>
+<span class="nc" id="L83">    }</span>
+    
+}//fin class
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>
