@@ -9,7 +9,7 @@ package mx.edu.uam.practica4.electroDomesticos;
  *
  * @author invited
  */
-public class Television {
+public class Television extends Electrodomestico{
     
     private int tamanio;
     
@@ -25,6 +25,9 @@ public class Television {
         this.canalActual = canalActual;
         this.volumenActual = volumenActual;
         this.volMaximo = volMaximo;
+    }
+    public Television(){
+        
     }
 
     public int getTamanio() {

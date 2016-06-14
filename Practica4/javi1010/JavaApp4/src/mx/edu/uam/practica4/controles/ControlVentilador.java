@@ -11,7 +11,7 @@ import mx.edu.uam.practica4.electroDomesticos.Ventilador;
  *
  * @author invited
  */
-public class ControlVentilador {
+public class ControlVentilador extends ControlRemoto{
     
     public void enciende(Electrodomestico v){
         if (v.isEstaEncendido())
