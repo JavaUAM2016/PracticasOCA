@@ -11,10 +11,8 @@ import mx.edu.beavercheeks.practica4.devices.Stereo;
  * @author sozir
  */
 public class StereoRemote extends Remote
-{
-    Stereo st = new Stereo();
-    
-    public void subeVolumen()
+{   
+    public void subeVolumen(Stereo st)
     {
         if (st.getEstado()==false)
         {
@@ -34,7 +32,7 @@ public class StereoRemote extends Remote
         
     }
     
-    public void bajaVolumen()
+    public void bajaVolumen(Stereo st)
     {
         if (st.getEstado()==false)
         {
@@ -54,7 +52,7 @@ public class StereoRemote extends Remote
         
     }
     
-    public void cambiaEstacionManualMas()
+    public void cambiaEstacionManualMas(Stereo st)
     {
         if (st.getEstado() == false)
             System.out.println("El stereo se encuentra apagado, no se puede modificar el volumen.");
@@ -67,7 +65,7 @@ public class StereoRemote extends Remote
         }
     }
     
-    public void cambiaEstacionManualMenos()
+    public void cambiaEstacionManualMenos(Stereo st)
     {
         if (st.getEstado() == false)
             System.out.println("El stereo se encuentra apagado, no se puede modificar el volumen.");

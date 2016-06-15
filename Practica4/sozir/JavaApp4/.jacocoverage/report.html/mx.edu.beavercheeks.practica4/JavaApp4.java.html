@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>JavaApp4.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;JavaApp4&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">mx.edu.beavercheeks.practica4</a> &gt; <span class="el_source">JavaApp4.java</span></div><h1>JavaApp4.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package mx.edu.beavercheeks.practica4;
+import mx.edu.beavercheeks.practica4.controls.*;
+import mx.edu.beavercheeks.practica4.devices.*;
+import mx.edu.beavercheeks.practica4.familia.*;
+
+
+/**
+ *
+ * @author sozir
+ */
+<span class="nc" id="L16">public class JavaApp4 {</span>
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+<span class="fc" id="L24">       Device tv = new Television();</span>
+<span class="fc" id="L25">       Remote cTV = new TvRemote();</span>
+       
+<span class="fc" id="L27">       Device st = new Stereo();</span>
+<span class="fc" id="L28">       Remote cST = new StereoRemote();</span>
+       
+<span class="fc" id="L30">       Device fan = new Fan();</span>
+<span class="fc" id="L31">       Remote cFAN = new FanRemote();</span>
+       
+<span class="fc" id="L33">       Device ac = new AirConditioner();</span>
+<span class="fc" id="L34">       Remote cAC = new AcRemote();</span>
+       
+<span class="fc" id="L36">       Remote[] controles = {cTV, cST, cFAN, cAC};</span>
+       
+<span class="fc" id="L38">       Familiar padre = new Padre();</span>
+<span class="fc" id="L39">       padre.setControlRemoto(controles);</span>
+       
+       //Probando TV
+<span class="fc" id="L42">       cTV=padre.getControlRemoto()[0];</span>
+<span class="fc" id="L43">       cTV.enciendeAparato(tv);</span>
+<span class="fc" id="L44">       ((TvRemote)cTV).cambiaCanalMas((Television)tv);</span>
+<span class="fc" id="L45">       ((TvRemote)cTV).subeVolumen((Television)tv);</span>
+<span class="fc" id="L46">       ((TvRemote)cTV).cambiaCanalMenos((Television)tv);</span>
+<span class="fc" id="L47">       ((TvRemote)cTV).bajaVolumen((Television)tv);</span>
+<span class="fc" id="L48">       ((TvRemote)cTV).cambiaCanal((Television)tv, 13);</span>
+<span class="fc" id="L49">       ((TvRemote)cTV).apagaAparato((Television)tv);</span>
+       
+       //Probando Stereo
+<span class="fc" id="L52">       cST=padre.getControlRemoto()[1];</span>
+<span class="fc" id="L53">       cST.enciendeAparato(st);</span>
+<span class="fc" id="L54">       ((StereoRemote)cST).cambiaEstacionManualMas((Stereo)st);</span>
+<span class="fc" id="L55">       ((StereoRemote)cST).subeVolumen((Stereo)st);</span>
+<span class="fc" id="L56">       ((StereoRemote)cST).cambiaEstacionManualMas((Stereo)st);</span>
+<span class="fc" id="L57">       ((StereoRemote)cST).cambiaEstacionManualMenos((Stereo)st);</span>
+<span class="fc" id="L58">       ((StereoRemote)cST).subeVolumen((Stereo)st);</span>
+<span class="fc" id="L59">       ((StereoRemote)cST).bajaVolumen((Stereo)st);</span>
+<span class="fc" id="L60">       cST.apagaAparato(st);</span>
+       
+       //Probando Ventilador
+<span class="fc" id="L63">       cFAN = padre.getControlRemoto()[2];</span>
+<span class="fc" id="L64">       ((FanRemote)cFAN).enciendeAparato(fan, (Fan)fan);</span>
+<span class="fc" id="L65">       ((FanRemote)cFAN).aumentaVelocidad((Fan)fan);</span>
+<span class="fc" id="L66">       ((FanRemote)cFAN).aumentaVelocidad((Fan)fan);</span>
+<span class="fc" id="L67">       ((FanRemote)cFAN).giraVentiladorIzquierda((Fan)fan);</span>
+<span class="fc" id="L68">       ((FanRemote)cFAN).giraVentiladorDerecha((Fan)fan);</span>
+<span class="fc" id="L69">       ((FanRemote)cFAN).programaApagado((Fan)fan, 7);</span>
+<span class="fc" id="L70">       ((FanRemote)cFAN).disminuyeVelocidad((Fan)fan);</span>
+<span class="fc" id="L71">       ((FanRemote)cFAN).disminuyeVelocidad((Fan)fan);</span>
+<span class="fc" id="L72">       ((FanRemote)cFAN).apagaAparato(fan, (Fan)fan);</span>
+       
+       //Probando Aire Acondicionado
+<span class="fc" id="L75">       cAC = padre.getControlRemoto()[3];</span>
+<span class="fc" id="L76">       ((AcRemote)cAC).enciendeAparato(ac, (AirConditioner)ac);</span>
+<span class="fc" id="L77">       ((AcRemote)cAC).aumentaVelocidad((AirConditioner)ac);</span>
+<span class="fc" id="L78">       ((AcRemote)cAC).modoCaliente((AirConditioner)ac);</span>
+<span class="fc" id="L79">       ((AcRemote)cAC).aumentaVelocidad((AirConditioner)ac);</span>
+<span class="fc" id="L80">       ((AcRemote)cAC).modoFrio((AirConditioner)ac);</span>
+<span class="fc" id="L81">       ((AcRemote)cAC).disminuyeVelocidad((AirConditioner)ac);</span>
+<span class="fc" id="L82">       ((AcRemote)cAC).apagaAparato(ac, (AirConditioner)ac);</span>
+<span class="fc" id="L83">     }</span>
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

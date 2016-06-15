@@ -13,11 +13,8 @@ import mx.edu.beavercheeks.practica4.devices.*;
  */
 public class FanRemote extends Remote
 {
-    Fan ventilador = new Fan();
-    
-    @Override
     //Sobrecarga del método para aumentar velocidad cuando se enciende
-    public void enciendeAparato(Device cualAparato)
+    public void enciendeAparato(Device cualAparato, Fan ventilador)
     {
         if(cualAparato.getEstado()==false)
         {
@@ -29,9 +26,8 @@ public class FanRemote extends Remote
             System.out.println("El aparato ya se encontraba encendido.");
     }
     
-    @Override
     //Sobrecarga del método para quitar velocidad cuando se apaga
-    public void apagaAparato(Device cualAparato)
+    public void apagaAparato(Device cualAparato, Fan ventilador)
     {
         if(cualAparato.getEstado()== false)
             System.out.println("El aparato ya se encontraba apagado");
@@ -43,7 +39,7 @@ public class FanRemote extends Remote
         }
     }
    
-    public void aumentaVelocidad()
+    public void aumentaVelocidad(Fan ventilador)
     {
         if (ventilador.getEstado()== false)
             System.out.println("El ventilador se encuentra apagado. No puede aumentar la velocidad.");
@@ -69,7 +65,7 @@ public class FanRemote extends Remote
         }    
     }
     
-    public void disminuyeVelocidad()
+    public void disminuyeVelocidad(Fan ventilador)
     {
        if (ventilador.getEstado()== false || ventilador.getVelocidad() == 0)
             System.out.println("El ventilador se encuentra apagado. No puede disminuir la velocidad.");
@@ -94,7 +90,7 @@ public class FanRemote extends Remote
         }  
     }
     
-    public void giraVentiladorDerecha()
+    public void giraVentiladorDerecha(Fan ventilador)
     {
         if (ventilador.getEstado()== false || ventilador.getVelocidad() == 0)
             System.out.println("El ventilador se encuentra apagado. No puede girar.");
@@ -110,7 +106,7 @@ public class FanRemote extends Remote
         }
     }
     
-    public void giraVentiladorIzquierda()
+    public void giraVentiladorIzquierda(Fan ventilador)
     {
         if (ventilador.getEstado()== false || ventilador.getVelocidad() == 0)
             System.out.println("El ventilador se encuentra apagado. No puede girar.");
@@ -126,7 +122,7 @@ public class FanRemote extends Remote
         }
     }
     
-    public void programaApagado(int cuantoTiempo)
+    public void programaApagado(Fan ventilador, int cuantoTiempo)
     {
          if (ventilador.getEstado()== false || ventilador.getVelocidad() == 0 || ventilador.getTimer() == 0)
             System.out.println("El ventilador se encuentra apagado.");

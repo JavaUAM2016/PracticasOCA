@@ -12,11 +12,9 @@ import mx.edu.beavercheeks.practica4.devices.*;
  */
 public class AcRemote extends Remote
 {
-    AirConditioner ac = new AirConditioner();
     
-    @Override
     //Sobrecarga del método para aumentar velocidad cuando se enciende
-    public void enciendeAparato(Device cualAparato)
+    public void enciendeAparato(Device cualAparato,  AirConditioner ac)
     {
         if(cualAparato.getEstado()==false)
         {
@@ -29,9 +27,8 @@ public class AcRemote extends Remote
             System.out.println("El aparato ya se encontraba encendido.");
     }
     
-    @Override
     //Sobrecarga del método para poner velocidad en 0 cuando se apaga.
-    public void apagaAparato(Device cualAparato)
+    public void apagaAparato(Device cualAparato,  AirConditioner ac)
     {
         if(cualAparato.getEstado()== false)
             System.out.println("El aparato ya se encontraba apagado");
@@ -43,7 +40,7 @@ public class AcRemote extends Remote
         }
     }
     
-    public void modoCaliente()
+    public void modoCaliente( AirConditioner ac)
     {
         if (ac.getEstado()== false)
             System.out.println("El AC se encuentra apagado, enciéndalo para poder operar.");
@@ -56,7 +53,7 @@ public class AcRemote extends Remote
         }
     }
     
-    public void modoFrio()
+    public void modoFrio(AirConditioner ac)
     {
         if (ac.getEstado()==false)
             System.out.println("El AC se encuentra apagado, enciéndalo para poder operar.");
@@ -69,7 +66,7 @@ public class AcRemote extends Remote
         }
     }
     
-    public void aumentaVelocidad()
+    public void aumentaVelocidad(AirConditioner ac)
     {
         if (ac.getEstado()==false)
             System.out.println("El AC se encuentra apagado, enciéndalo para poder operar.");
@@ -80,7 +77,7 @@ public class AcRemote extends Remote
         }
     }
     
-    public void disminuyeVelocidad()
+    public void disminuyeVelocidad(AirConditioner ac)
     {
        if (ac.getEstado()==false)
             System.out.println("El AC se encuentra apagado, enciéndalo para poder operar.");

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>AcRemote.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;JavaApp4&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">mx.edu.beavercheeks.practica4.controls</a> &gt; <span class="el_source">AcRemote.java</span></div><h1>AcRemote.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package mx.edu.beavercheeks.practica4.controls;
+import mx.edu.beavercheeks.practica4.devices.*;
+
+/**
+ *
+ * @author sozir
+ */
+<span class="fc" id="L13">public class AcRemote extends Remote</span>
+{
+    
+    //Sobrecarga del método para aumentar velocidad cuando se enciende
+    public void enciendeAparato(Device cualAparato,  AirConditioner ac)
+    {
+<span class="pc bpc" id="L19" title="1 of 2 branches missed.">        if(cualAparato.getEstado()==false)</span>
+        {
+<span class="fc" id="L21">            cualAparato.setEstado(true);</span>
+<span class="fc" id="L22">            ac.setModo(true);</span>
+<span class="fc" id="L23">            ac.setVelocidad(1);</span>
+<span class="fc" id="L24">            System.out.println(&quot;Encendiendo dispositivo..&quot;);</span>
+        }
+        else 
+<span class="nc" id="L27">            System.out.println(&quot;El aparato ya se encontraba encendido.&quot;);</span>
+<span class="fc" id="L28">    }</span>
+    
+    //Sobrecarga del método para poner velocidad en 0 cuando se apaga.
+    public void apagaAparato(Device cualAparato,  AirConditioner ac)
+    {
+<span class="pc bpc" id="L33" title="1 of 2 branches missed.">        if(cualAparato.getEstado()== false)</span>
+<span class="nc" id="L34">            System.out.println(&quot;El aparato ya se encontraba apagado&quot;);</span>
+        else
+        {
+<span class="fc" id="L37">            cualAparato.setEstado(false);</span>
+<span class="fc" id="L38">            ac.setVelocidad(0);</span>
+<span class="fc" id="L39">            System.out.println(&quot;Apagando dispositivo&quot;);</span>
+        }
+<span class="fc" id="L41">    }</span>
+    
+    public void modoCaliente( AirConditioner ac)
+    {
+<span class="pc bpc" id="L45" title="1 of 2 branches missed.">        if (ac.getEstado()== false)</span>
+<span class="nc" id="L46">            System.out.println(&quot;El AC se encuentra apagado, enciéndalo para poder operar.&quot;);</span>
+        else
+        {
+<span class="fc" id="L49">            ac.setModo(false);</span>
+<span class="fc" id="L50">            ac.setTemperatura(10);</span>
+<span class="fc" id="L51">            ac.setVelocidad(2);</span>
+<span class="fc" id="L52">            System.out.println(&quot;El AC ahora calienta. La temperatura es de &quot;+ ac.getTemperatura() + &quot;°. La velocidad es de &quot;+ ac.getVelocidad());</span>
+        }
+<span class="fc" id="L54">    }</span>
+    
+    public void modoFrio(AirConditioner ac)
+    {
+<span class="pc bpc" id="L58" title="1 of 2 branches missed.">        if (ac.getEstado()==false)</span>
+<span class="nc" id="L59">            System.out.println(&quot;El AC se encuentra apagado, enciéndalo para poder operar.&quot;);</span>
+        else
+        {
+<span class="fc" id="L62">            ac.setModo(true);</span>
+<span class="fc" id="L63">            ac.setTemperatura(-10);</span>
+<span class="fc" id="L64">            ac.setVelocidad(2);</span>
+<span class="fc" id="L65">            System.out.println(&quot;El AC ahora enfría. La temperatura es de &quot;+ ac.getTemperatura() + &quot;°. La velocidad es de &quot;+ ac.getVelocidad());</span>
+        }
+<span class="fc" id="L67">    }</span>
+    
+    public void aumentaVelocidad(AirConditioner ac)
+    {
+<span class="pc bpc" id="L71" title="1 of 2 branches missed.">        if (ac.getEstado()==false)</span>
+<span class="nc" id="L72">            System.out.println(&quot;El AC se encuentra apagado, enciéndalo para poder operar.&quot;);</span>
+        else
+        {
+<span class="fc" id="L75">            ac.setVelocidad(1);</span>
+<span class="fc" id="L76">            System.out.println(&quot;La velocidad es de &quot;+ ac.getVelocidad());</span>
+        }
+<span class="fc" id="L78">    }</span>
+    
+    public void disminuyeVelocidad(AirConditioner ac)
+    {
+<span class="pc bpc" id="L82" title="1 of 2 branches missed.">       if (ac.getEstado()==false)</span>
+<span class="nc" id="L83">            System.out.println(&quot;El AC se encuentra apagado, enciéndalo para poder operar.&quot;);</span>
+        else
+        {
+<span class="fc" id="L86">            ac.setVelocidad(-1);</span>
+<span class="fc" id="L87">            System.out.println(&quot;La velocidad es de &quot;+ ac.getVelocidad());</span>
+        } 
+<span class="fc" id="L89">    }</span>
+    
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

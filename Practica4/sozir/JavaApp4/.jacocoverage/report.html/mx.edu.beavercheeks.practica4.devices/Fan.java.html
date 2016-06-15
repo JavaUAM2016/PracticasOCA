@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Fan.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;JavaApp4&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">mx.edu.beavercheeks.practica4.devices</a> &gt; <span class="el_source">Fan.java</span></div><h1>Fan.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package mx.edu.beavercheeks.practica4.devices;
+
+/**
+ *
+ * @author sozir
+ */
+public class Fan extends Device
+{
+    private int velocidad;
+    private boolean giratorio;
+    private int timer;
+    
+    public Fan()
+<span class="fc" id="L19">    {</span>
+<span class="fc" id="L20">        isOn = false;</span>
+<span class="fc" id="L21">        marca = &quot;Home Line&quot;;</span>
+<span class="fc" id="L22">        velocidad = 0;</span>
+<span class="fc" id="L23">        giratorio = false;</span>
+<span class="fc" id="L24">        timer = 0;</span>
+<span class="fc" id="L25">    }</span>
+    
+    public boolean getEstado()
+    {
+<span class="fc" id="L29">        return isOn;</span>
+    }
+    
+    public boolean setEstado(boolean loEnciendo)
+    {
+<span class="fc" id="L34">        isOn = loEnciendo;</span>
+<span class="fc" id="L35">        return isOn;</span>
+    }
+    
+    public int getVelocidad()
+    {
+<span class="fc" id="L40">        return velocidad;</span>
+    }
+    
+    public int setVelocidad(int queVelocidad)
+    {
+<span class="fc bfc" id="L45" title="All 4 branches covered.">        switch (queVelocidad)</span>
+        {
+            case 1:
+<span class="fc" id="L48">                velocidad = 1;</span>
+<span class="fc" id="L49">                break;</span>
+            case 2: 
+<span class="fc" id="L51">                velocidad = 2;</span>
+<span class="fc" id="L52">                break;</span>
+            case 3:
+<span class="fc" id="L54">                velocidad = 3;</span>
+<span class="fc" id="L55">                break;</span>
+            default:
+                //System.out.println(&quot;El valor que especificó no se encuentra en el rago permitido. Velocidad en 0.&quot;);
+<span class="fc" id="L58">                velocidad = 0;</span>
+                break;
+        }
+<span class="fc" id="L61">        return velocidad;</span>
+    }
+    
+    public boolean getGiratorio()
+    {
+<span class="fc" id="L66">        return this.giratorio;</span>
+    }
+    
+    public boolean setGiratorio(int haciaDonde)
+    {
+<span class="pc bpc" id="L71" title="2 of 4 branches missed.">        if (haciaDonde == 1 || haciaDonde == 2)</span>
+<span class="fc" id="L72">            this.giratorio = true;</span>
+        else
+<span class="nc" id="L74">            this.giratorio = false;</span>
+        
+<span class="fc" id="L76">        return this.giratorio;</span>
+    }
+    
+    public int getTimer()
+    {
+<span class="fc" id="L81">        return this.timer;</span>
+    }
+    
+    public int setTimer(int cuantoTiempo)
+    {
+<span class="nc" id="L86">        this.timer = cuantoTiempo;</span>
+<span class="nc" id="L87">        return this.timer;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

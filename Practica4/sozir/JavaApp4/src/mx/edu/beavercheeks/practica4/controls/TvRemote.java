@@ -13,9 +13,7 @@ import mx.edu.beavercheeks.practica4.devices.Television;
 public class TvRemote extends Remote
 {
     
-    Television tv = new Television();
-    
-    public void subeVolumen()
+    public void subeVolumen(Television tv)
     {
         if (tv.getEstado() == false)
         {
@@ -34,7 +32,7 @@ public class TvRemote extends Remote
                 tv.volumenActual = 100;*/
         }
     }
-    public void bajaVolumen()
+    public void bajaVolumen(Television tv)
     {
         if (tv.getEstado()==false)
         {
@@ -54,7 +52,7 @@ public class TvRemote extends Remote
         }
     }
     
-    public void cambiaCanalMas()
+    public void cambiaCanalMas(Television tv)
     {
         if (tv.getEstado()==false)
         {
@@ -69,7 +67,7 @@ public class TvRemote extends Remote
         }
     }
     
-    public void cambiaCanalMenos()
+    public void cambiaCanalMenos(Television tv)
     {
         if (tv.getEstado()==false)
         {
@@ -84,7 +82,7 @@ public class TvRemote extends Remote
         }
     }
     
-    public void cambiaCanal(int cualCanal)
+    public void cambiaCanal(Television tv, int cualCanal)
     {
         if (tv.getEstado()==false)
         {
