@@ -1,6 +1,7 @@
 package mx.edu.uam.practica4.control;
 
 import mx.edu.uam.practica4.electrodomestico.PlayStation3;
+import mx.edu.uam.practica4.exceptions.SistemaAparatosException;
 
 public class ControlPs3 extends Control{
     
@@ -18,38 +19,38 @@ public class ControlPs3 extends Control{
         
     }
     
-    public void descargaJuego(PlayStation3 ps3,int tamJuego){
+    public void descargaJuego(PlayStation3 ps3,int tamJuego) throws SistemaAparatosException{
         if(ps3.isEncendido()){
             if(ps3.isWifi())
                 if(tamJuego <= ps3.getCapacidadDiscoDuroMax())
                     System.out.println("Iniciando Descarga...please wait\n");
                 else
-                    System.out.println("Capacidad Disco Duro Insuficiente..\n");
+                    throw new SistemaAparatosException("Capacidad Disco Duro Insuficiente..\n");
             else
-                System.out.println("Comprube su conexion a Internet ??\n");
+                throw new SistemaAparatosException("Comprube su conexion a Internet ??\n");
 
         }
     }
     
-    public void cargaJuego(PlayStation3 ps3,int noJuego){
+    public void cargaJuego(PlayStation3 ps3,int noJuego) throws SistemaAparatosException{
         if(ps3.isEncendido()){
             if(noJuego > 0 && noJuego <= ps3.getVideoJuegosInstall()){
             ps3.setVideoJuegoActual(noJuego);
             System.out.println("Juego ["+ps3.getVideoJuegoActual()+"] Cargando...\n");
         }
         else
-            System.out.println("Número de Juego No valido...Exit\n");
+            throw new SistemaAparatosException("Número de Juego No valido...Exit\n");
         }  
     }
     
-    public void agregaJugador(PlayStation3 ps3){
+    public void agregaJugador(PlayStation3 ps3)throws SistemaAparatosException{
         if(ps3.isEncendido()){
             if(ps3.getJugadores() >= 0 && ps3.getJugadores()< ps3.getNoJugadoresMax()){
             ps3.setJugadores(ps3.getJugadores()+1);
             System.out.println("Nuevo Jugador Agregado..\n");
         }
         else
-            System.out.println("Operacion Invalida No se pueden agregar mas Jugadores.\n");
+            throw new SistemaAparatosException("Operacion Invalida No se pueden agregar mas Jugadores.\n");
         }
     }
 }
