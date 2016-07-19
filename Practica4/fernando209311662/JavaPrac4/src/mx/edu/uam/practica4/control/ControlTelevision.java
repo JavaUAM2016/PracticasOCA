@@ -10,7 +10,7 @@ public class ControlTelevision extends Control{
     }
     
     public ControlTelevision(){
-        
+    
     }
     
     public void subeVol(Television tv){
@@ -19,7 +19,6 @@ public class ControlTelevision extends Control{
                 tv.setVolumenActual((tv.getVolumenActual())+1);
             System.out.println("VOL:"+ tv.getVolumenActual());
         }
-        
     }
     
     public void bajaVol(Television tv){

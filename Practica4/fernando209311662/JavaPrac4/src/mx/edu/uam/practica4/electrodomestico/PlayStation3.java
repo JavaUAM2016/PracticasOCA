@@ -25,6 +25,10 @@ public class PlayStation3 extends Electrodomestico{
         this.videoJuegoActual = videoJuegoActual;
     }
 
+    public PlayStation3() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public int getDiscoDuro() {
         return discoDuro;
     }

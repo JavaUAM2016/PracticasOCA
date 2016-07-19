@@ -1,6 +1,7 @@
 package mx.edu.uam.practica4.control;
 
 import mx.edu.uam.practica4.electrodomestico.Xbox360;
+import mx.edu.uam.practica4.exceptions.SistemaAparatosException;
 
 public class ControlXbox extends Control{
     
@@ -39,10 +40,10 @@ public class ControlXbox extends Control{
         }  
     }
     
-    public void conectaControl(Xbox360 xbox){
+    public void conectaControl(Xbox360 xbox)throws SistemaAparatosException{
         if(xbox.isEncendido()){
             if(xbox.getControlesConectados()>=xbox.getControlesMax())
-                System.out.println("Ya no se pueden conectarmás controles");
+                throw new SistemaAparatosException("Ya no se pueden conectarmás controles");
             else{
                 System.out.println("Conectando control...");
                 xbox.setControlesConectados(xbox.getControlesConectados()+1);

@@ -7,11 +7,9 @@ package mx.edu.uam;
 
 import mx.edu.uam.practica4.aparatos.BlueRay;
 import mx.edu.uam.practica4.aparatos.ElectroDomestico;
-import mx.edu.uam.practica4.aparatos.Radio;
 import mx.edu.uam.practica4.control.ControlTelevision;
 import mx.edu.uam.practica4.aparatos.Television;
 import mx.edu.uam.practica4.control.ControlBlueRay;
-import mx.edu.uam.practica4.control.ControlRadio;
 import mx.edu.uam.practica4.control.ControlRemoto;
 import mx.edu.uam.practica4.familia.Familiar;
 import mx.edu.uam.practica4.familia.Padre;
