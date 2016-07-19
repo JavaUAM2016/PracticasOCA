@@ -18,7 +18,7 @@ public abstract  class ControlRemoto {
      * @param aparato 
      */
     public void encender(ElectroDomestico aparato) {
-        
+        aparato.setEstaEncendido(true);
     }
 
     /**
@@ -27,6 +27,7 @@ public abstract  class ControlRemoto {
      */
     public void apagar(ElectroDomestico aparato) {
      
+       aparato.setEstaEncendido(false);
     }
     
 

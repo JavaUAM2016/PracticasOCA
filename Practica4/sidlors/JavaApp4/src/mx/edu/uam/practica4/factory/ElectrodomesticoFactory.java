@@ -45,14 +45,16 @@ public class ElectrodomesticoFactory extends AbstractFactory{
 
     @Override
     public ControlRemoto getControl(String typeControl) {
-        return null;
+        
+        throw new UnsupportedOperationException("Operacion Invalida");
+        
     }
 
     
 
     @Override
     public Familiar getFamiliar(String typeFamiliar) {
-        return null;
+        throw new UnsupportedOperationException("Operacion Invalida");
     }
     
    

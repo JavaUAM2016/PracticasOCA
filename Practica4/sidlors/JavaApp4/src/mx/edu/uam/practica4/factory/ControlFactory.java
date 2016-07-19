@@ -5,6 +5,7 @@
  */
 package mx.edu.uam.practica4.factory;
 
+import mx.edu.uam.practica4.aparatos.BlueRay;
 import mx.edu.uam.practica4.aparatos.ElectroDomestico;
 import mx.edu.uam.practica4.aparatos.Television;
 import mx.edu.uam.practica4.controles.ControlBlueRay;
@@ -19,35 +20,39 @@ import mx.edu.uam.practica4.familia.Familiar;
  */
 public class ControlFactory extends AbstractFactory {
 
+
     @Override
-    public  ControlRemoto getControl(String typeControl) {
-        //TODO
-        ControlRemoto controlRemoto = null;
+     public ControlRemoto getControl(String typeControl) {
+        ControlRemoto control = null;
         switch (typeControl) {
+
             case "ControlTV":
-                controlRemoto = new ControlTV();
+                control = new ControlTV();
                 break;
             case "ControlBlueRay":
-                controlRemoto = new ControlBlueRay();
+                control = new ControlBlueRay();
                 break;
             case "ControlVentilador":
-                controlRemoto = new ControlVentilador();
+                control = new ControlVentilador();
                 break;
             default:
-                System.err.println("Error al crear Control. no soportado: " + typeControl);
+                System.err.println("Error al crear Control. no soportado: "+ typeControl);
         }
 
-        return controlRemoto;
+        return control;
+        
     }
 
     @Override
     public ElectroDomestico getElectrodometico(String typeElectrodomestico) {
-        return null;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public Familiar getFamiliar(String typeFamiliar) {
-        return null;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    
 
 }

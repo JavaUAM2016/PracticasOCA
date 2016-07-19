@@ -7,6 +7,7 @@ package mx.edu.uam.practica4.exceptions;
 public class SistemaAparatosException extends Exception {
     
     public SistemaAparatosException(){
+     super();
     }
 
     public SistemaAparatosException(String message) {

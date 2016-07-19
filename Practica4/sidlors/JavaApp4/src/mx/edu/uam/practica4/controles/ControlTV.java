@@ -39,14 +39,15 @@ public class ControlTV extends ControlRemoto {
 
     }
 
+    
     /**
-     * metodo privado que implementa la funcionalidad de subir volumen a TV
+     * Metodo que sube Volumen de la Television @param tv
      * @param tv
      * @throws SistemaAparatosException 
      */
     private void subeVolumenTV(Television tv) throws SistemaAparatosException {
         if (tv.getVolumenActual() < tv.getVolumenMaximo()) {
-
+            tv.setVolumenActual(tv.getVolumenActual()+1);
         } else {
             throw new SistemaAparatosException("Este aparato ya tiene 'Volumen maximo'");
         }
@@ -54,18 +55,30 @@ public class ControlTV extends ControlRemoto {
     
     /**
      * Cambia Siguiente canal en el televisor
-     * @param tv 
+     * @param tv
+     * @throws SistemaAparatosException 
      */
-    public void cambiarCanalSiguiente(Television tv){
-        tv.setCanalActual(tv.getCanalActual()+1);
+    public void cambiarCanalSiguiente(Television tv) throws SistemaAparatosException{
+       
+         if (tv.isEstaEncendido()) {
+           tv.setCanalActual(tv.getCanalActual()+1);
+        } else {
+           throw new SistemaAparatosException("No se puede cambiar de canal la television esta apagada!");
+        }
     }
 
     /**
-     *  Cambia al canal Anterior en el televisor
-     * @param tv 
+     * Cambia al canal Anterior en el televisor
+     * @param tv Objeto Television
+     * @throws  SistemaAparatosException es un "custom exception" del proyecto
      */
-    public void cambiarCanalAnterior(Television tv){
-        tv.setCanalActual(tv.getCanalActual()+1);
+    public void cambiarCanalAnterior(Television tv) throws SistemaAparatosException{
+        
+        if (tv.isEstaEncendido()) {
+           tv.setCanalActual(tv.getCanalActual()-1);
+        } else {
+            throw new SistemaAparatosException("No se puede cambiar de canal la television esta apagada!");
+        }
     }
     
     /**
@@ -73,7 +86,12 @@ public class ControlTV extends ControlRemoto {
      * @param tv
      * @param canal 
      */
-    public void cambiarCanal(Television tv, int canal){
-        tv.setCanalActual(canal);
+    public void cambiarCanal(Television tv, int canal) throws SistemaAparatosException{
+        
+        if (tv.isEstaEncendido()) {
+            tv.setCanalActual(canal);
+        } else {
+            throw new SistemaAparatosException("No se puede cambiar de canal la television esta apagadas");
+        }
     }
 }
