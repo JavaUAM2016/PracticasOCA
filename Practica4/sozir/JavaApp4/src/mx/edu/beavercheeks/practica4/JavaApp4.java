@@ -6,6 +6,7 @@
 package mx.edu.beavercheeks.practica4;
 import mx.edu.beavercheeks.practica4.controls.*;
 import mx.edu.beavercheeks.practica4.devices.*;
+import mx.edu.beavercheeks.practica4.exceptions.SystemDevicesExceptions;
 import mx.edu.beavercheeks.practica4.familia.*;
 
 
@@ -17,8 +18,9 @@ public class JavaApp4 {
 
     /**
      * @param args the command line arguments
+     * @throws mx.edu.beavercheeks.practica4.exceptions.SystemDevicesExceptions
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SystemDevicesExceptions {
         // TODO code application logic here
         
        Device tv = new Television();

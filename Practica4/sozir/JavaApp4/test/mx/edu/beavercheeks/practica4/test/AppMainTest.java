@@ -11,6 +11,7 @@ import mx.edu.beavercheeks.practica4.controls.TvRemote;
 import mx.edu.beavercheeks.practica4.devices.Device;
 import mx.edu.beavercheeks.practica4.devices.Stereo;
 import mx.edu.beavercheeks.practica4.devices.Television;
+import mx.edu.beavercheeks.practica4.exceptions.SystemDevicesExceptions;
 import mx.edu.beavercheeks.practica4.familia.Familiar;
 import mx.edu.beavercheeks.practica4.familia.Padre;
 import org.junit.After;
@@ -58,8 +59,18 @@ public class AppMainTest
         
         padre.setControlRemoto(controles);
         controlTV = padre.getControlRemoto()[0];
-        controlTV.enciendeAparato(tv);
-        ((TvRemote) controlTV).cambiaCanal(tv, 25);
+        //controlTV.enciendeAparato(tv);
+        controlTV.apagaAparato(tv);
+        try
+        {
+            ((TvRemote) controlTV).cambiaCanal(tv, 25);
+        }
+        catch (SystemDevicesExceptions excepcion)
+        {
+            System.err.println("Error: " +excepcion.getMessage());
+            excepcion.getStackTrace();
+        }
+        
     }
     
     @After
